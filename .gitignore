@@ -1,0 +1,14 @@
+# Visual Studio cache
+.vs/
+*.user
+*.suo
+*.vscode/
+
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Tt]emp/
+
+# Entity Framework migrations snapshot
+*Migrations/*.Designer.cs
