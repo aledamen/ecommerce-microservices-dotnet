@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using MSProducts.Application.Repositories;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
+using MSProducts.Application.Dtos;
+using MSProducts.Application.Services;
+using MSProducts.Presentation.Dtos;
 
 namespace MSProducts.Presentation.Controllers
 {
@@ -7,66 +10,82 @@ namespace MSProducts.Presentation.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private readonly IProductRepository _productRepository;
-        public ProductsController(IProductRepository productRepository)
+        private readonly IProductService _productService;
+        private readonly IMapper _mapper;
+
+        public ProductsController(IProductService productService, IMapper mapper)
         {
-            _productRepository = productRepository;
+            _productService = productService;
+            _mapper = mapper;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAllProducts()
         {
-            var products = await _productRepository.GetAllProductsAsync();
-            return Ok(products);
+            var result = await _productService.GetAllProductsAsync();
+
+            if (result.IsSuccess)
+                return Ok(result.Value);
+
+            return NotFound(result.Error);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetProductById(int id)
         {
-            var product = await _productRepository.GetProductByIdAsync(id);
-            if (product == null)
-            {
-                return NotFound();
-            }
-            return Ok(product);
+            var result = await _productService.GetProductByIdAsync(id);
+
+            if (result.IsSuccess)
+                return Ok(result.Value);
+
+            return NotFound(result.Error);
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateProduct([FromBody] MSProducts.Domain.Product product)
+        public async Task<IActionResult> CreateProduct([FromBody] CreateProductRequest createProductRequest)
         {
-            if (!ModelState.IsValid)
+            if(createProductRequest == null)
             {
-                return BadRequest(ModelState);
+                return BadRequest("Product data is null.");
             }
-            await _productRepository.AddProductAsync(product);
-            return CreatedAtAction(nameof(GetProductById), new { id = product.Id }, product);
+
+            var productDto = _mapper.Map<CreateProductDto>(createProductRequest);
+
+            var result = await _productService.CreateProductAsync(productDto);
+
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.Error);
+            }
+
+            return CreatedAtAction(nameof(GetProductById), new { id = result.Value.Id }, createProductRequest);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateProduct(int id, [FromBody] MSProducts.Domain.Product product)
+        public async Task<IActionResult> UpdateProduct(int id, [FromBody] UpdateProductRequest updateProductRequest)
         {
-            if (id != product.Id || !ModelState.IsValid)
+           if (updateProductRequest == null)
             {
-                return BadRequest(ModelState);
+                return BadRequest("Product data is null.");
             }
-            var existingProduct = await _productRepository.GetProductByIdAsync(id);
-            if (existingProduct == null)
-            {
-                return NotFound();
-            }
-            await _productRepository.UpdateProductAsync(product);
-            return NoContent();
+            var updatePproductDto = _mapper.Map<UpdateProductDto>(updateProductRequest);
+
+            var result = await _productService.UpdateProductAsync(id, updatePproductDto);
+
+            if (!result.IsSuccess)
+                return BadRequest(result.Error);
+
+            return Ok(result.Value);
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProduct(int id)
         {
-            var existingProduct = await _productRepository.GetProductByIdAsync(id);
-            if (existingProduct == null)
-            {
-                return NotFound();
-            }
-            await _productRepository.DeleteProductAsync(id);
+            var result = await _productService.DeleteProductAsync(id);
+
+            if (!result.IsSuccess)
+                return NotFound(result.Error);
+
             return NoContent();
         }
     }

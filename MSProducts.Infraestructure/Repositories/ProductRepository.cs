@@ -24,26 +24,26 @@ namespace MSProducts.Infraestructure.Repositories
             return await _dbContext.Products.FirstOrDefaultAsync(p => p.Id == id);
         }
 
-        public async Task AddProductAsync(Product product)
+        public async Task<Product> CreateProductAsync(Product product)
         {
             await _dbContext.Products.AddAsync(product);
+
             await _dbContext.SaveChangesAsync();
+
+            return product;
         }
 
-        public async Task UpdateProductAsync(Product product)
+        public async Task<int> UpdateProductAsync(Product product)
         {
             _dbContext.Products.Update(product);
-            await _dbContext.SaveChangesAsync();
+
+            return await _dbContext.SaveChangesAsync();
         }
 
-        public async Task DeleteProductAsync(int id)
+        public async Task<int> DeleteProductAsync(Product product)
         {
-            var product = await _dbContext.Products.FindAsync(id);
-            if (product != null)
-            {
-                _dbContext.Products.Remove(product);
-                await _dbContext.SaveChangesAsync();
-            }
+            _dbContext.Products.Remove(product);
+            return await _dbContext.SaveChangesAsync();
         }
     }
 }
