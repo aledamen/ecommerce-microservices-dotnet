@@ -10,8 +10,8 @@ namespace MSProducts.Application.Validators
             RuleFor(p => p.Name)
                 .NotEmpty()
                 .WithMessage("Product name is required")
-                .MaximumLength(100)
-                .WithMessage("Product name cannot exceed 100 characters");
+                .MaximumLength(50)
+                .WithMessage("Product name cannot exceed 50 characters");
 
             RuleFor(p => p.Description)
                 .MaximumLength(300)
