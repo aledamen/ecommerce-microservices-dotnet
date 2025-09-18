@@ -1,0 +1,463 @@
+2025-09-18 18:50:09.216 +02:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-09-18 18:50:09.268 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-09-18 18:50:09.269 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-09-18 18:50:09.324 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2025-09-18 18:50:09.325 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-09-18 18:50:09.326 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-09-18 18:50:09.330 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-09-18 18:50:09.339 +02:00 [INF] Applying migration '20250918164943_migration-01'.
+2025-09-18 18:50:09.367 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Customers] (
+    [Id] int NOT NULL IDENTITY,
+    [FirstName] nvarchar(50) NOT NULL,
+    [LastName] nvarchar(50) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [Address_Street] nvarchar(100) NOT NULL,
+    [Address_City] nvarchar(50) NOT NULL,
+    [Address_Number] int NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NOT NULL,
+    CONSTRAINT [PK_Customers] PRIMARY KEY ([Id])
+);
+2025-09-18 18:50:09.371 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250918164943_migration-01', N'8.0.20');
+2025-09-18 19:12:39.825 +02:00 [INF] Now listening on: https://localhost:7254
+2025-09-18 19:12:39.904 +02:00 [INF] Now listening on: http://localhost:5288
+2025-09-18 19:12:40.052 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-18 19:12:40.055 +02:00 [INF] Hosting environment: Development
+2025-09-18 19:12:40.059 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSCustomers.Presentation
+2025-09-18 19:12:40.737 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/swagger/index.html - null null
+2025-09-18 19:12:40.955 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/swagger/index.html - 200 null text/html;charset=utf-8 219.0912ms
+2025-09-18 19:12:40.975 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-18 19:12:40.984 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/_framework/aspnetcore-browser-refresh.js - 200 16533 application/javascript; charset=utf-8 9.1019ms
+2025-09-18 19:12:40.999 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/_vs/browserLink - null null
+2025-09-18 19:12:41.048 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.6855ms
+2025-09-18 19:12:41.155 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/swagger/v1/swagger.json - null null
+2025-09-18 19:12:41.165 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.9486ms
+2025-09-18 19:13:16.635 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/api/Customers - null null
+2025-09-18 19:13:16.647 +02:00 [INF] Executing endpoint 'MSCustomers.Presentation.Controllers.CustomersController.GetAllCustomers (MSCustomers.Presentation)'
+2025-09-18 19:13:16.812 +02:00 [INF] Route matched with {action = "GetAllCustomers", controller = "Customers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCustomers() on controller MSCustomers.Presentation.Controllers.CustomersController (MSCustomers.Presentation).
+2025-09-18 19:13:16.825 +02:00 [INF] Executed action MSCustomers.Presentation.Controllers.CustomersController.GetAllCustomers (MSCustomers.Presentation) in 5.2501ms
+2025-09-18 19:13:16.829 +02:00 [INF] Executed endpoint 'MSCustomers.Presentation.Controllers.CustomersController.GetAllCustomers (MSCustomers.Presentation)'
+2025-09-18 19:13:16.834 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'MSCustomers.Application.Services.ICustomerService' while attempting to activate 'MSCustomers.Presentation.Controllers.CustomersController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-09-18 19:13:16.903 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/api/Customers - 500 null text/plain; charset=utf-8 268.3452ms
+2025-09-18 19:19:14.988 +02:00 [INF] Now listening on: https://localhost:7254
+2025-09-18 19:19:15.048 +02:00 [INF] Now listening on: http://localhost:5288
+2025-09-18 19:19:15.161 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-18 19:19:15.163 +02:00 [INF] Hosting environment: Development
+2025-09-18 19:19:15.164 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSCustomers.Presentation
+2025-09-18 19:19:15.471 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/swagger/index.html - null null
+2025-09-18 19:19:15.655 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/swagger/index.html - 200 null text/html;charset=utf-8 187.4631ms
+2025-09-18 19:19:15.678 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-18 19:19:15.691 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/_framework/aspnetcore-browser-refresh.js - 200 16533 application/javascript; charset=utf-8 13.3854ms
+2025-09-18 19:19:15.698 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/_vs/browserLink - null null
+2025-09-18 19:19:15.742 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/_vs/browserLink - 200 null text/javascript; charset=UTF-8 44.7748ms
+2025-09-18 19:19:15.816 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/swagger/v1/swagger.json - null null
+2025-09-18 19:19:15.825 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.2055ms
+2025-09-18 19:20:10.263 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/api/Customers - null null
+2025-09-18 19:20:10.271 +02:00 [INF] Executing endpoint 'MSCustomers.Presentation.Controllers.CustomersController.GetAllCustomers (MSCustomers.Presentation)'
+2025-09-18 19:20:10.289 +02:00 [INF] Route matched with {action = "GetAllCustomers", controller = "Customers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCustomers() on controller MSCustomers.Presentation.Controllers.CustomersController (MSCustomers.Presentation).
+2025-09-18 19:20:10.572 +02:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-09-18 19:20:12.825 +02:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedAt], [c].[Email], [c].[FirstName], [c].[LastName], [c].[PhoneNumber], [c].[UpdatedAt], [c].[Address_City], [c].[Address_Number], [c].[Address_Street]
+FROM [Customers] AS [c]
+2025-09-18 19:20:12.856 +02:00 [INF] Retrieved 0 customers
+2025-09-18 19:20:12.870 +02:00 [INF] Executing OkObjectResult, writing value of type 'MSCustomers.Presentation.Contracts.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[MSCustomers.Application.Dtos.CustomerResponseDto, MSCustomers.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-18 19:20:13.112 +02:00 [INF] Executed action MSCustomers.Presentation.Controllers.CustomersController.GetAllCustomers (MSCustomers.Presentation) in 2590.2524ms
+2025-09-18 19:20:13.114 +02:00 [INF] Executed endpoint 'MSCustomers.Presentation.Controllers.CustomersController.GetAllCustomers (MSCustomers.Presentation)'
+2025-09-18 19:20:13.122 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/api/Customers - 200 null application/json; charset=utf-8 2858.6468ms
+2025-09-18 19:23:15.525 +02:00 [INF] Now listening on: https://localhost:7254
+2025-09-18 19:23:15.570 +02:00 [INF] Now listening on: http://localhost:5288
+2025-09-18 19:23:15.705 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-18 19:23:15.707 +02:00 [INF] Hosting environment: Development
+2025-09-18 19:23:15.709 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSCustomers.Presentation
+2025-09-18 19:23:16.238 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/swagger/index.html - null null
+2025-09-18 19:23:16.429 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/swagger/index.html - 200 null text/html;charset=utf-8 193.5509ms
+2025-09-18 19:23:16.441 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-18 19:23:16.449 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/_framework/aspnetcore-browser-refresh.js - 200 16533 application/javascript; charset=utf-8 7.5525ms
+2025-09-18 19:23:16.465 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/_vs/browserLink - null null
+2025-09-18 19:23:16.508 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.5409ms
+2025-09-18 19:23:16.580 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/swagger/v1/swagger.json - null null
+2025-09-18 19:23:16.592 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.1267ms
+2025-09-18 19:23:42.962 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7254/api/Customers - application/json 181
+2025-09-18 19:23:42.975 +02:00 [INF] Executing endpoint 'MSCustomers.Presentation.Controllers.CustomersController.CreateCustomer (MSCustomers.Presentation)'
+2025-09-18 19:23:43.020 +02:00 [INF] Route matched with {action = "CreateCustomer", controller = "Customers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateCustomer(MSCustomers.Presentation.Dtos.CreateCustomerRequest) on controller MSCustomers.Presentation.Controllers.CustomersController (MSCustomers.Presentation).
+2025-09-18 19:23:43.371 +02:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-09-18 19:23:43.580 +02:00 [INF] Executed action MSCustomers.Presentation.Controllers.CustomersController.CreateCustomer (MSCustomers.Presentation) in 553.1698ms
+2025-09-18 19:23:43.584 +02:00 [INF] Executed endpoint 'MSCustomers.Presentation.Controllers.CustomersController.CreateCustomer (MSCustomers.Presentation)'
+2025-09-18 19:23:43.589 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+CreateCustomerRequest -> CreateCustomerDto
+MSCustomers.Presentation.Dtos.CreateCustomerRequest -> MSCustomers.Application.Dtos.CreateCustomerDto
+   at lambda_method17(Closure, Object, CreateCustomerDto, ResolutionContext)
+   at MSCustomers.Presentation.Controllers.CustomersController.CreateCustomer(CreateCustomerRequest createCustomerRequest) in C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSCustomers.Presentation\Controllers\CustomersController.cs:line 72
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-09-18 19:23:43.681 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7254/api/Customers - 500 null text/plain; charset=utf-8 718.918ms
+2025-09-18 19:24:56.919 +02:00 [INF] Now listening on: https://localhost:7254
+2025-09-18 19:24:56.975 +02:00 [INF] Now listening on: http://localhost:5288
+2025-09-18 19:24:57.075 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-18 19:24:57.076 +02:00 [INF] Hosting environment: Development
+2025-09-18 19:24:57.077 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSCustomers.Presentation
+2025-09-18 19:24:57.529 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/swagger/index.html - null null
+2025-09-18 19:24:57.681 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/swagger/index.html - 200 null text/html;charset=utf-8 153.7844ms
+2025-09-18 19:24:57.697 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-18 19:24:57.705 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/_framework/aspnetcore-browser-refresh.js - 200 16533 application/javascript; charset=utf-8 8.227ms
+2025-09-18 19:24:57.720 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/_vs/browserLink - null null
+2025-09-18 19:24:57.756 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.8266ms
+2025-09-18 19:24:57.826 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/swagger/v1/swagger.json - null null
+2025-09-18 19:24:57.835 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.7938ms
+2025-09-18 19:26:01.081 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7254/api/Customers - application/json 178
+2025-09-18 19:26:01.092 +02:00 [INF] Executing endpoint 'MSCustomers.Presentation.Controllers.CustomersController.CreateCustomer (MSCustomers.Presentation)'
+2025-09-18 19:26:01.117 +02:00 [INF] Route matched with {action = "CreateCustomer", controller = "Customers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateCustomer(MSCustomers.Presentation.Dtos.CreateCustomerRequest) on controller MSCustomers.Presentation.Controllers.CustomersController (MSCustomers.Presentation).
+2025-09-18 19:26:01.331 +02:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-09-18 19:26:02.269 +02:00 [INF] Executed DbCommand (52ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 50), @p3='?' (Size = 50), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (Size = 50), @p7='?' (DbType = Int32), @p8='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([CreatedAt], [Email], [FirstName], [LastName], [PhoneNumber], [UpdatedAt], [Address_City], [Address_Number], [Address_Street])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2025-09-18 19:26:02.411 +02:00 [INF] Executed action MSCustomers.Presentation.Controllers.CustomersController.CreateCustomer (MSCustomers.Presentation) in 1288.1852ms
+2025-09-18 19:26:02.414 +02:00 [INF] Executed endpoint 'MSCustomers.Presentation.Controllers.CustomersController.CreateCustomer (MSCustomers.Presentation)'
+2025-09-18 19:26:02.420 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Customer -> CustomerResponseDto
+MSCustomers.Domain.Entities.Customer -> MSCustomers.Application.Dtos.CustomerResponseDto
+   at lambda_method141(Closure, Object, CustomerResponseDto, ResolutionContext)
+   at MSCustomers.Presentation.Controllers.CustomersController.CreateCustomer(CreateCustomerRequest createCustomerRequest) in C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSCustomers.Presentation\Controllers\CustomersController.cs:line 82
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-09-18 19:26:02.482 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7254/api/Customers - 500 null text/plain; charset=utf-8 1401.0263ms
+2025-09-18 19:26:37.070 +02:00 [INF] Now listening on: https://localhost:7254
+2025-09-18 19:26:37.105 +02:00 [INF] Now listening on: http://localhost:5288
+2025-09-18 19:26:37.189 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-18 19:26:37.190 +02:00 [INF] Hosting environment: Development
+2025-09-18 19:26:37.191 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSCustomers.Presentation
+2025-09-18 19:26:37.693 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/swagger/index.html - null null
+2025-09-18 19:26:37.872 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/swagger/index.html - 200 null text/html;charset=utf-8 180.9932ms
+2025-09-18 19:26:37.894 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-18 19:26:37.903 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/_framework/aspnetcore-browser-refresh.js - 200 16533 application/javascript; charset=utf-8 8.3005ms
+2025-09-18 19:26:37.917 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/_vs/browserLink - null null
+2025-09-18 19:26:37.955 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/_vs/browserLink - 200 null text/javascript; charset=UTF-8 37.5337ms
+2025-09-18 19:26:37.996 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/swagger/v1/swagger.json - null null
+2025-09-18 19:26:38.006 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.9104ms
+2025-09-18 19:27:27.954 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7254/api/Customers - application/json 178
+2025-09-18 19:27:27.967 +02:00 [INF] Executing endpoint 'MSCustomers.Presentation.Controllers.CustomersController.CreateCustomer (MSCustomers.Presentation)'
+2025-09-18 19:27:28.016 +02:00 [INF] Route matched with {action = "CreateCustomer", controller = "Customers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateCustomer(MSCustomers.Presentation.Dtos.CreateCustomerRequest) on controller MSCustomers.Presentation.Controllers.CustomersController (MSCustomers.Presentation).
+2025-09-18 19:27:28.383 +02:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-09-18 19:27:30.179 +02:00 [INF] Executed DbCommand (82ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 50), @p3='?' (Size = 50), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (Size = 50), @p7='?' (DbType = Int32), @p8='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([CreatedAt], [Email], [FirstName], [LastName], [PhoneNumber], [UpdatedAt], [Address_City], [Address_Number], [Address_Street])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2025-09-18 19:27:30.250 +02:00 [INF] Created customer with ID 2
+2025-09-18 19:27:30.279 +02:00 [INF] Executing CreatedAtActionResult, writing value of type 'MSCustomers.Presentation.Contracts.ApiResponse`1[[MSCustomers.Application.Dtos.CustomerResponseDto, MSCustomers.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-18 19:27:30.330 +02:00 [INF] Executed action MSCustomers.Presentation.Controllers.CustomersController.CreateCustomer (MSCustomers.Presentation) in 2306.3425ms
+2025-09-18 19:27:30.334 +02:00 [INF] Executed endpoint 'MSCustomers.Presentation.Controllers.CustomersController.CreateCustomer (MSCustomers.Presentation)'
+2025-09-18 19:27:30.347 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7254/api/Customers - 201 null application/json; charset=utf-8 2392.9783ms
+2025-09-18 19:28:24.366 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7254/api/Customers - application/json 178
+2025-09-18 19:28:24.370 +02:00 [INF] Executing endpoint 'MSCustomers.Presentation.Controllers.CustomersController.CreateCustomer (MSCustomers.Presentation)'
+2025-09-18 19:28:24.371 +02:00 [INF] Route matched with {action = "CreateCustomer", controller = "Customers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateCustomer(MSCustomers.Presentation.Dtos.CreateCustomerRequest) on controller MSCustomers.Presentation.Controllers.CustomersController (MSCustomers.Presentation).
+2025-09-18 19:28:24.448 +02:00 [INF] Executed DbCommand (25ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 50), @p3='?' (Size = 50), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (Size = 50), @p7='?' (DbType = Int32), @p8='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([CreatedAt], [Email], [FirstName], [LastName], [PhoneNumber], [UpdatedAt], [Address_City], [Address_Number], [Address_Street])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2025-09-18 19:29:53.366 +02:00 [INF] Now listening on: https://localhost:7254
+2025-09-18 19:29:53.411 +02:00 [INF] Now listening on: http://localhost:5288
+2025-09-18 19:29:53.522 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-18 19:29:53.523 +02:00 [INF] Hosting environment: Development
+2025-09-18 19:29:53.524 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSCustomers.Presentation
+2025-09-18 19:29:53.667 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7254/api/Customers - application/json 178
+2025-09-18 19:29:53.705 +02:00 [INF] Executing endpoint 'MSCustomers.Presentation.Controllers.CustomersController.CreateCustomer (MSCustomers.Presentation)'
+2025-09-18 19:29:53.738 +02:00 [INF] Route matched with {action = "CreateCustomer", controller = "Customers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateCustomer(MSCustomers.Presentation.Dtos.CreateCustomerRequest) on controller MSCustomers.Presentation.Controllers.CustomersController (MSCustomers.Presentation).
+2025-09-18 19:29:53.953 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/swagger/index.html - null null
+2025-09-18 19:29:54.080 +02:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-09-18 19:29:54.150 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/swagger/index.html - 200 null text/html;charset=utf-8 195.8808ms
+2025-09-18 19:29:54.175 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-18 19:29:54.195 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/_framework/aspnetcore-browser-refresh.js - 200 16533 application/javascript; charset=utf-8 19.286ms
+2025-09-18 19:29:54.197 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/_vs/browserLink - null null
+2025-09-18 19:29:54.270 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/_vs/browserLink - 200 null text/javascript; charset=UTF-8 72.7198ms
+2025-09-18 19:29:54.359 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/swagger/v1/swagger.json - null null
+2025-09-18 19:29:54.373 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.6762ms
+2025-09-18 19:29:55.227 +02:00 [INF] Executed DbCommand (38ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 50), @p3='?' (Size = 50), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (Size = 50), @p7='?' (DbType = Int32), @p8='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([CreatedAt], [Email], [FirstName], [LastName], [PhoneNumber], [UpdatedAt], [Address_City], [Address_Number], [Address_Street])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2025-09-18 19:31:13.987 +02:00 [INF] Now listening on: https://localhost:7254
+2025-09-18 19:31:14.050 +02:00 [INF] Now listening on: http://localhost:5288
+2025-09-18 19:31:14.189 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-18 19:31:14.191 +02:00 [INF] Hosting environment: Development
+2025-09-18 19:31:14.192 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSCustomers.Presentation
+2025-09-18 19:31:14.730 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/swagger/index.html - null null
+2025-09-18 19:31:14.911 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/swagger/index.html - 200 null text/html;charset=utf-8 182.8627ms
+2025-09-18 19:31:14.929 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-18 19:31:14.939 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/_framework/aspnetcore-browser-refresh.js - 200 16533 application/javascript; charset=utf-8 10.2716ms
+2025-09-18 19:31:14.948 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/_vs/browserLink - null null
+2025-09-18 19:31:14.989 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.026ms
+2025-09-18 19:31:15.062 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/swagger/v1/swagger.json - null null
+2025-09-18 19:31:15.074 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.9203ms
+2025-09-18 19:31:21.755 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7254/api/Customers - application/json 187
+2025-09-18 19:31:21.764 +02:00 [INF] Executing endpoint 'MSCustomers.Presentation.Controllers.CustomersController.CreateCustomer (MSCustomers.Presentation)'
+2025-09-18 19:31:21.790 +02:00 [INF] Route matched with {action = "CreateCustomer", controller = "Customers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateCustomer(MSCustomers.Presentation.Dtos.CreateCustomerRequest) on controller MSCustomers.Presentation.Controllers.CustomersController (MSCustomers.Presentation).
+2025-09-18 19:31:21.990 +02:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-09-18 19:31:22.056 +02:00 [ERR] Error creating customer: Validation failed: A valid email is required
+2025-09-18 19:31:22.063 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'MSCustomers.Presentation.Contracts.ApiResponse`1[[MSCustomers.Application.Dtos.CustomerResponseDto, MSCustomers.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-18 19:31:22.076 +02:00 [INF] Executed action MSCustomers.Presentation.Controllers.CustomersController.CreateCustomer (MSCustomers.Presentation) in 281.7347ms
+2025-09-18 19:31:22.079 +02:00 [INF] Executed endpoint 'MSCustomers.Presentation.Controllers.CustomersController.CreateCustomer (MSCustomers.Presentation)'
+2025-09-18 19:31:22.083 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7254/api/Customers - 400 null application/json; charset=utf-8 328.4514ms
+2025-09-18 19:31:33.538 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7254/api/Customers - application/json 198
+2025-09-18 19:31:33.541 +02:00 [INF] Executing endpoint 'MSCustomers.Presentation.Controllers.CustomersController.CreateCustomer (MSCustomers.Presentation)'
+2025-09-18 19:31:33.543 +02:00 [INF] Route matched with {action = "CreateCustomer", controller = "Customers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateCustomer(MSCustomers.Presentation.Dtos.CreateCustomerRequest) on controller MSCustomers.Presentation.Controllers.CustomersController (MSCustomers.Presentation).
+2025-09-18 19:31:34.376 +02:00 [INF] Executed DbCommand (51ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 50), @p3='?' (Size = 50), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (Size = 50), @p7='?' (DbType = Int32), @p8='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([CreatedAt], [Email], [FirstName], [LastName], [PhoneNumber], [UpdatedAt], [Address_City], [Address_Number], [Address_Street])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2025-09-18 19:31:44.215 +02:00 [INF] Created customer with ID 5
+2025-09-18 19:31:44.218 +02:00 [INF] Executing CreatedAtActionResult, writing value of type 'MSCustomers.Presentation.Contracts.ApiResponse`1[[MSCustomers.Application.Dtos.CustomerResponseDto, MSCustomers.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-18 19:31:44.232 +02:00 [INF] Executed action MSCustomers.Presentation.Controllers.CustomersController.CreateCustomer (MSCustomers.Presentation) in 10686.9497ms
+2025-09-18 19:31:44.234 +02:00 [INF] Executed endpoint 'MSCustomers.Presentation.Controllers.CustomersController.CreateCustomer (MSCustomers.Presentation)'
+2025-09-18 19:31:44.241 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7254/api/Customers - 201 null application/json; charset=utf-8 10703.1921ms
+2025-09-18 19:32:03.994 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/api/Customers/5 - null null
+2025-09-18 19:32:03.999 +02:00 [INF] Executing endpoint 'MSCustomers.Presentation.Controllers.CustomersController.GetCustomerById (MSCustomers.Presentation)'
+2025-09-18 19:32:04.007 +02:00 [INF] Route matched with {action = "GetCustomerById", controller = "Customers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCustomerById(Int32) on controller MSCustomers.Presentation.Controllers.CustomersController (MSCustomers.Presentation).
+2025-09-18 19:32:04.568 +02:00 [INF] Executed DbCommand (12ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[Email], [c].[FirstName], [c].[LastName], [c].[PhoneNumber], [c].[UpdatedAt], [c].[Address_City], [c].[Address_Number], [c].[Address_Street]
+FROM [Customers] AS [c]
+WHERE [c].[Id] = @__id_0
+2025-09-18 19:32:04.592 +02:00 [INF] Retrieved customer with ID 5
+2025-09-18 19:32:04.594 +02:00 [INF] Executing OkObjectResult, writing value of type 'MSCustomers.Presentation.Contracts.ApiResponse`1[[MSCustomers.Application.Dtos.CustomerResponseDto, MSCustomers.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-18 19:32:04.597 +02:00 [INF] Executed action MSCustomers.Presentation.Controllers.CustomersController.GetCustomerById (MSCustomers.Presentation) in 586.9073ms
+2025-09-18 19:32:04.600 +02:00 [INF] Executed endpoint 'MSCustomers.Presentation.Controllers.CustomersController.GetCustomerById (MSCustomers.Presentation)'
+2025-09-18 19:32:04.601 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/api/Customers/5 - 200 null application/json; charset=utf-8 607.4224ms
+2025-09-18 19:32:21.889 +02:00 [INF] Request starting HTTP/1.1 PATCH https://localhost:7254/api/Customers/5 - application/json 29
+2025-09-18 19:32:21.894 +02:00 [INF] Executing endpoint 'MSCustomers.Presentation.Controllers.CustomersController.UpdateCustoemr (MSCustomers.Presentation)'
+2025-09-18 19:32:21.902 +02:00 [INF] Route matched with {action = "UpdateCustoemr", controller = "Customers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateCustoemr(Int32, MSCustomers.Presentation.Dtos.UpdateCustomerRequest) on controller MSCustomers.Presentation.Controllers.CustomersController (MSCustomers.Presentation).
+2025-09-18 19:32:21.923 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-09-18 19:32:21.961 +02:00 [INF] Executed action MSCustomers.Presentation.Controllers.CustomersController.UpdateCustoemr (MSCustomers.Presentation) in 56.534ms
+2025-09-18 19:32:21.964 +02:00 [INF] Executed endpoint 'MSCustomers.Presentation.Controllers.CustomersController.UpdateCustoemr (MSCustomers.Presentation)'
+2025-09-18 19:32:21.966 +02:00 [INF] Request finished HTTP/1.1 PATCH https://localhost:7254/api/Customers/5 - 400 null application/problem+json; charset=utf-8 77.1374ms
+2025-09-18 19:32:29.555 +02:00 [INF] Request starting HTTP/1.1 PATCH https://localhost:7254/api/Customers/5 - application/json 28
+2025-09-18 19:32:29.567 +02:00 [INF] Executing endpoint 'MSCustomers.Presentation.Controllers.CustomersController.UpdateCustoemr (MSCustomers.Presentation)'
+2025-09-18 19:32:29.569 +02:00 [INF] Route matched with {action = "UpdateCustoemr", controller = "Customers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateCustoemr(Int32, MSCustomers.Presentation.Dtos.UpdateCustomerRequest) on controller MSCustomers.Presentation.Controllers.CustomersController (MSCustomers.Presentation).
+2025-09-18 19:32:29.624 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[Email], [c].[FirstName], [c].[LastName], [c].[PhoneNumber], [c].[UpdatedAt], [c].[Address_City], [c].[Address_Number], [c].[Address_Street]
+FROM [Customers] AS [c]
+WHERE [c].[Id] = @__id_0
+2025-09-18 19:32:29.658 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 50), @p3='?' (Size = 50), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Customers] SET [CreatedAt] = @p0, [Email] = @p1, [FirstName] = @p2, [LastName] = @p3, [PhoneNumber] = @p4, [UpdatedAt] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2025-09-18 19:32:29.667 +02:00 [INF] Updated customer with ID 5
+2025-09-18 19:32:29.669 +02:00 [INF] Executing OkObjectResult, writing value of type 'MSCustomers.Presentation.Contracts.ApiResponse`1[[MSCustomers.Application.Dtos.CustomerResponseDto, MSCustomers.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-18 19:32:29.671 +02:00 [INF] Executed action MSCustomers.Presentation.Controllers.CustomersController.UpdateCustoemr (MSCustomers.Presentation) in 96.785ms
+2025-09-18 19:32:29.673 +02:00 [INF] Executed endpoint 'MSCustomers.Presentation.Controllers.CustomersController.UpdateCustoemr (MSCustomers.Presentation)'
+2025-09-18 19:32:29.675 +02:00 [INF] Request finished HTTP/1.1 PATCH https://localhost:7254/api/Customers/5 - 200 null application/json; charset=utf-8 120.0282ms
+2025-09-18 19:32:54.477 +02:00 [INF] Request starting HTTP/1.1 PATCH https://localhost:7254/api/Customers/5 - application/json 28
+2025-09-18 19:32:54.480 +02:00 [INF] Executing endpoint 'MSCustomers.Presentation.Controllers.CustomersController.UpdateCustoemr (MSCustomers.Presentation)'
+2025-09-18 19:32:54.482 +02:00 [INF] Route matched with {action = "UpdateCustoemr", controller = "Customers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateCustoemr(Int32, MSCustomers.Presentation.Dtos.UpdateCustomerRequest) on controller MSCustomers.Presentation.Controllers.CustomersController (MSCustomers.Presentation).
+2025-09-18 19:32:54.490 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[Email], [c].[FirstName], [c].[LastName], [c].[PhoneNumber], [c].[UpdatedAt], [c].[Address_City], [c].[Address_Number], [c].[Address_Street]
+FROM [Customers] AS [c]
+WHERE [c].[Id] = @__id_0
+2025-09-18 19:32:54.501 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 50), @p3='?' (Size = 50), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Customers] SET [CreatedAt] = @p0, [Email] = @p1, [FirstName] = @p2, [LastName] = @p3, [PhoneNumber] = @p4, [UpdatedAt] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2025-09-18 19:32:54.503 +02:00 [INF] Updated customer with ID 5
+2025-09-18 19:32:54.505 +02:00 [INF] Executing OkObjectResult, writing value of type 'MSCustomers.Presentation.Contracts.ApiResponse`1[[MSCustomers.Application.Dtos.CustomerResponseDto, MSCustomers.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-18 19:32:54.507 +02:00 [INF] Executed action MSCustomers.Presentation.Controllers.CustomersController.UpdateCustoemr (MSCustomers.Presentation) in 23.0199ms
+2025-09-18 19:32:54.508 +02:00 [INF] Executed endpoint 'MSCustomers.Presentation.Controllers.CustomersController.UpdateCustoemr (MSCustomers.Presentation)'
+2025-09-18 19:32:54.509 +02:00 [INF] Request finished HTTP/1.1 PATCH https://localhost:7254/api/Customers/5 - 200 null application/json; charset=utf-8 32.2745ms
+2025-09-18 19:33:04.046 +02:00 [INF] Now listening on: https://localhost:7254
+2025-09-18 19:33:04.084 +02:00 [INF] Now listening on: http://localhost:5288
+2025-09-18 19:33:04.189 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-18 19:33:04.190 +02:00 [INF] Hosting environment: Development
+2025-09-18 19:33:04.192 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSCustomers.Presentation
+2025-09-18 19:33:04.553 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/swagger/index.html - null null
+2025-09-18 19:33:04.718 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/swagger/index.html - 200 null text/html;charset=utf-8 166.2632ms
+2025-09-18 19:33:04.738 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-18 19:33:04.748 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/_framework/aspnetcore-browser-refresh.js - 200 16533 application/javascript; charset=utf-8 10.0703ms
+2025-09-18 19:33:04.760 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/_vs/browserLink - null null
+2025-09-18 19:33:04.802 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.0129ms
+2025-09-18 19:33:04.843 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/swagger/v1/swagger.json - null null
+2025-09-18 19:33:04.853 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.7064ms
+2025-09-18 19:33:15.836 +02:00 [INF] Request starting HTTP/1.1 PATCH https://localhost:7254/api/Customers/5 - application/json 29
+2025-09-18 19:33:15.845 +02:00 [INF] Executing endpoint 'MSCustomers.Presentation.Controllers.CustomersController.UpdateCustomer (MSCustomers.Presentation)'
+2025-09-18 19:33:15.868 +02:00 [INF] Route matched with {action = "UpdateCustomer", controller = "Customers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateCustomer(Int32, MSCustomers.Presentation.Dtos.UpdateCustomerRequest) on controller MSCustomers.Presentation.Controllers.CustomersController (MSCustomers.Presentation).
+2025-09-18 19:33:16.043 +02:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-09-18 19:33:16.076 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-09-18 19:33:16.097 +02:00 [INF] Executed action MSCustomers.Presentation.Controllers.CustomersController.UpdateCustomer (MSCustomers.Presentation) in 223.7553ms
+2025-09-18 19:33:16.098 +02:00 [INF] Executed endpoint 'MSCustomers.Presentation.Controllers.CustomersController.UpdateCustomer (MSCustomers.Presentation)'
+2025-09-18 19:33:16.101 +02:00 [INF] Request finished HTTP/1.1 PATCH https://localhost:7254/api/Customers/5 - 400 null application/problem+json; charset=utf-8 264.8382ms
+2025-09-18 19:33:27.006 +02:00 [INF] Request starting HTTP/1.1 PATCH https://localhost:7254/api/Customers/5 - application/json 28
+2025-09-18 19:33:27.011 +02:00 [INF] Executing endpoint 'MSCustomers.Presentation.Controllers.CustomersController.UpdateCustomer (MSCustomers.Presentation)'
+2025-09-18 19:33:27.013 +02:00 [INF] Route matched with {action = "UpdateCustomer", controller = "Customers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateCustomer(Int32, MSCustomers.Presentation.Dtos.UpdateCustomerRequest) on controller MSCustomers.Presentation.Controllers.CustomersController (MSCustomers.Presentation).
+2025-09-18 19:33:28.163 +02:00 [INF] Executed DbCommand (44ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[Email], [c].[FirstName], [c].[LastName], [c].[PhoneNumber], [c].[UpdatedAt], [c].[Address_City], [c].[Address_Number], [c].[Address_Street]
+FROM [Customers] AS [c]
+WHERE [c].[Id] = @__id_0
+2025-09-18 19:33:28.316 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 50), @p3='?' (Size = 50), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Customers] SET [CreatedAt] = @p0, [Email] = @p1, [FirstName] = @p2, [LastName] = @p3, [PhoneNumber] = @p4, [UpdatedAt] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2025-09-18 19:34:04.717 +02:00 [INF] Updated customer with ID 5
+2025-09-18 19:34:04.739 +02:00 [INF] Executing OkObjectResult, writing value of type 'MSCustomers.Presentation.Contracts.ApiResponse`1[[MSCustomers.Application.Dtos.CustomerResponseDto, MSCustomers.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-18 19:34:04.751 +02:00 [INF] Executed action MSCustomers.Presentation.Controllers.CustomersController.UpdateCustomer (MSCustomers.Presentation) in 37735.856ms
+2025-09-18 19:34:04.754 +02:00 [INF] Executed endpoint 'MSCustomers.Presentation.Controllers.CustomersController.UpdateCustomer (MSCustomers.Presentation)'
+2025-09-18 19:34:04.760 +02:00 [INF] Request finished HTTP/1.1 PATCH https://localhost:7254/api/Customers/5 - 200 null application/json; charset=utf-8 37754.3528ms
+2025-09-18 19:34:08.600 +02:00 [INF] Request starting HTTP/1.1 PATCH https://localhost:7254/api/Customers/5 - application/json 28
+2025-09-18 19:34:08.603 +02:00 [INF] Executing endpoint 'MSCustomers.Presentation.Controllers.CustomersController.UpdateCustomer (MSCustomers.Presentation)'
+2025-09-18 19:34:08.604 +02:00 [INF] Route matched with {action = "UpdateCustomer", controller = "Customers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateCustomer(Int32, MSCustomers.Presentation.Dtos.UpdateCustomerRequest) on controller MSCustomers.Presentation.Controllers.CustomersController (MSCustomers.Presentation).
+2025-09-18 19:34:10.939 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[Email], [c].[FirstName], [c].[LastName], [c].[PhoneNumber], [c].[UpdatedAt], [c].[Address_City], [c].[Address_Number], [c].[Address_Street]
+FROM [Customers] AS [c]
+WHERE [c].[Id] = @__id_0
+2025-09-18 19:34:53.645 +02:00 [INF] Now listening on: https://localhost:7254
+2025-09-18 19:34:53.699 +02:00 [INF] Now listening on: http://localhost:5288
+2025-09-18 19:34:53.814 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-18 19:34:53.816 +02:00 [INF] Hosting environment: Development
+2025-09-18 19:34:53.817 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSCustomers.Presentation
+2025-09-18 19:34:54.076 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/swagger/index.html - null null
+2025-09-18 19:34:54.316 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/swagger/index.html - 200 null text/html;charset=utf-8 241.8684ms
+2025-09-18 19:34:54.335 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-18 19:34:54.342 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/_framework/aspnetcore-browser-refresh.js - 200 16533 application/javascript; charset=utf-8 7.7412ms
+2025-09-18 19:34:54.355 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/_vs/browserLink - null null
+2025-09-18 19:34:54.393 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.2352ms
+2025-09-18 19:34:54.438 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/swagger/v1/swagger.json - null null
+2025-09-18 19:34:54.451 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.6384ms
+2025-09-18 19:35:07.711 +02:00 [INF] Request starting HTTP/1.1 PATCH https://localhost:7254/api/Customers/5 - application/json 29
+2025-09-18 19:35:07.727 +02:00 [INF] Executing endpoint 'MSCustomers.Presentation.Controllers.CustomersController.UpdateCustomer (MSCustomers.Presentation)'
+2025-09-18 19:35:07.781 +02:00 [INF] Route matched with {action = "UpdateCustomer", controller = "Customers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateCustomer(Int32, MSCustomers.Presentation.Dtos.UpdateCustomerRequest) on controller MSCustomers.Presentation.Controllers.CustomersController (MSCustomers.Presentation).
+2025-09-18 19:35:08.182 +02:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-09-18 19:35:18.560 +02:00 [INF] Executed DbCommand (65ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[Email], [c].[FirstName], [c].[LastName], [c].[PhoneNumber], [c].[UpdatedAt], [c].[Address_City], [c].[Address_Number], [c].[Address_Street]
+FROM [Customers] AS [c]
+WHERE [c].[Id] = @__id_0
+2025-09-18 19:35:27.221 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 50), @p3='?' (Size = 50), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Customers] SET [CreatedAt] = @p0, [Email] = @p1, [FirstName] = @p2, [LastName] = @p3, [PhoneNumber] = @p4, [UpdatedAt] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2025-09-18 19:35:27.239 +02:00 [INF] Updated customer with ID 5
+2025-09-18 19:35:27.249 +02:00 [INF] Executing OkObjectResult, writing value of type 'MSCustomers.Presentation.Contracts.ApiResponse`1[[MSCustomers.Application.Dtos.CustomerResponseDto, MSCustomers.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-18 19:35:27.268 +02:00 [INF] Executed action MSCustomers.Presentation.Controllers.CustomersController.UpdateCustomer (MSCustomers.Presentation) in 19479.614ms
+2025-09-18 19:35:27.270 +02:00 [INF] Executed endpoint 'MSCustomers.Presentation.Controllers.CustomersController.UpdateCustomer (MSCustomers.Presentation)'
+2025-09-18 19:35:27.282 +02:00 [INF] Request finished HTTP/1.1 PATCH https://localhost:7254/api/Customers/5 - 200 null application/json; charset=utf-8 19570.8998ms
+2025-09-18 19:35:43.476 +02:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7254/api/Customers/5 - null null
+2025-09-18 19:35:43.480 +02:00 [INF] Executing endpoint 'MSCustomers.Presentation.Controllers.CustomersController.DeleteCustomer (MSCustomers.Presentation)'
+2025-09-18 19:35:43.486 +02:00 [INF] Route matched with {action = "DeleteCustomer", controller = "Customers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteCustomer(Int32) on controller MSCustomers.Presentation.Controllers.CustomersController (MSCustomers.Presentation).
+2025-09-18 19:35:43.507 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[Email], [c].[FirstName], [c].[LastName], [c].[PhoneNumber], [c].[UpdatedAt], [c].[Address_City], [c].[Address_Number], [c].[Address_Street]
+FROM [Customers] AS [c]
+WHERE [c].[Id] = @__id_0
+2025-09-18 19:35:43.531 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Customers]
+OUTPUT 1
+WHERE [Id] = @p0;
+2025-09-18 19:35:43.537 +02:00 [INF] Deleted customer with ID 5
+2025-09-18 19:35:43.541 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-09-18 19:35:43.543 +02:00 [INF] Executed action MSCustomers.Presentation.Controllers.CustomersController.DeleteCustomer (MSCustomers.Presentation) in 53.9014ms
+2025-09-18 19:35:43.544 +02:00 [INF] Executed endpoint 'MSCustomers.Presentation.Controllers.CustomersController.DeleteCustomer (MSCustomers.Presentation)'
+2025-09-18 19:35:43.547 +02:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7254/api/Customers/5 - 204 null null 71.3089ms
+2025-09-18 19:35:52.410 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/api/Customers/5 - null null
+2025-09-18 19:35:52.413 +02:00 [INF] Executing endpoint 'MSCustomers.Presentation.Controllers.CustomersController.GetCustomerById (MSCustomers.Presentation)'
+2025-09-18 19:35:52.417 +02:00 [INF] Route matched with {action = "GetCustomerById", controller = "Customers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCustomerById(Int32) on controller MSCustomers.Presentation.Controllers.CustomersController (MSCustomers.Presentation).
+2025-09-18 19:35:52.461 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[Email], [c].[FirstName], [c].[LastName], [c].[PhoneNumber], [c].[UpdatedAt], [c].[Address_City], [c].[Address_Number], [c].[Address_Street]
+FROM [Customers] AS [c]
+WHERE [c].[Id] = @__id_0
+2025-09-18 19:35:52.464 +02:00 [WRN] Customer with ID 5 not found: Customer not found
+2025-09-18 19:35:52.466 +02:00 [INF] Executing NotFoundObjectResult, writing value of type 'MSCustomers.Presentation.Contracts.ApiResponse`1[[MSCustomers.Application.Dtos.CustomerResponseDto, MSCustomers.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-18 19:35:52.468 +02:00 [INF] Executed action MSCustomers.Presentation.Controllers.CustomersController.GetCustomerById (MSCustomers.Presentation) in 49.3991ms
+2025-09-18 19:35:52.470 +02:00 [INF] Executed endpoint 'MSCustomers.Presentation.Controllers.CustomersController.GetCustomerById (MSCustomers.Presentation)'
+2025-09-18 19:35:52.471 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/api/Customers/5 - 404 null application/json; charset=utf-8 61.3025ms
+2025-09-18 19:35:59.152 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7254/api/Customers/4 - null null
+2025-09-18 19:35:59.156 +02:00 [INF] Executing endpoint 'MSCustomers.Presentation.Controllers.CustomersController.GetCustomerById (MSCustomers.Presentation)'
+2025-09-18 19:35:59.157 +02:00 [INF] Route matched with {action = "GetCustomerById", controller = "Customers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCustomerById(Int32) on controller MSCustomers.Presentation.Controllers.CustomersController (MSCustomers.Presentation).
+2025-09-18 19:35:59.163 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[Email], [c].[FirstName], [c].[LastName], [c].[PhoneNumber], [c].[UpdatedAt], [c].[Address_City], [c].[Address_Number], [c].[Address_Street]
+FROM [Customers] AS [c]
+WHERE [c].[Id] = @__id_0
+2025-09-18 19:35:59.166 +02:00 [INF] Retrieved customer with ID 4
+2025-09-18 19:35:59.167 +02:00 [INF] Executing OkObjectResult, writing value of type 'MSCustomers.Presentation.Contracts.ApiResponse`1[[MSCustomers.Application.Dtos.CustomerResponseDto, MSCustomers.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-18 19:35:59.169 +02:00 [INF] Executed action MSCustomers.Presentation.Controllers.CustomersController.GetCustomerById (MSCustomers.Presentation) in 10.2953ms
+2025-09-18 19:35:59.171 +02:00 [INF] Executed endpoint 'MSCustomers.Presentation.Controllers.CustomersController.GetCustomerById (MSCustomers.Presentation)'
+2025-09-18 19:35:59.172 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7254/api/Customers/4 - 200 null application/json; charset=utf-8 20.2549ms
