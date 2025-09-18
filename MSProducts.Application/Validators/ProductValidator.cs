@@ -18,8 +18,8 @@ namespace MSProducts.Application.Validators
                 .WithMessage("Description cannot exceed 300 characters");
 
             RuleFor(p => p.Price)
-                .GreaterThanOrEqualTo(0)
-                .WithMessage("Price must be greater than or equal to 0");
+                .GreaterThan(0)
+                .WithMessage("Price must be greater than 0");
 
             RuleFor(p => p.Stock)
                 .GreaterThanOrEqualTo(0)
