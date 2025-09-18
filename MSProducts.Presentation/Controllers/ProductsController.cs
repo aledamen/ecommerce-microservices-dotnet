@@ -86,7 +86,7 @@ namespace MSProducts.Presentation.Controllers
             return CreatedAtAction(
                 nameof(GetProductById), 
                 new { id = result.Value.Id }, 
-                ApiResponse<Product>.SuccessResponse(result.Value, 201)
+                ApiResponse<ProductResponseDto>.SuccessResponse(createdProduct, 201)
             );
         }
 
@@ -99,9 +99,9 @@ namespace MSProducts.Presentation.Controllers
                 return BadRequest(ApiResponse<ProductResponseDto>.ErrorResponse("Product data is null", 400));
             }
 
-            var updatePproductDto = _mapper.Map<UpdateProductDto>(updateProductRequest);
+            var updateProductDto = _mapper.Map<UpdateProductDto>(updateProductRequest);
 
-            var result = await _productService.UpdateProductAsync(id, updatePproductDto);
+            var result = await _productService.UpdateProductAsync(id, updateProductDto);
 
             if (!result.IsSuccess)
             {

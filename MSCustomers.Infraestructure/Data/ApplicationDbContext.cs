@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MSProducts.Domain.Entities;
+using MSCustomers.Domain.Entities;
 
-namespace MSProducts.Infraestructure.Data
+namespace MSCustomers.Infraestructure.Data
 {
     public class ApplicationDbContext: DbContext
     {
@@ -9,15 +9,11 @@ namespace MSProducts.Infraestructure.Data
         {
         }
 
-        public DbSet<Product> Products { get; set; }
+        public DbSet<Customer> Customers { get; set; }
 
         override protected void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Product>(entity =>
-            {
-                entity.Property(e => e.Price)
-                      .HasColumnType("decimal(18,2)");
-            });
+            modelBuilder.Entity<Customer>().OwnsOne(o => o.Address);
 
             base.OnModelCreating(modelBuilder);
         }
