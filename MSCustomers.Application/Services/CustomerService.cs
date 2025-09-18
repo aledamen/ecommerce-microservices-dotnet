@@ -18,7 +18,7 @@ namespace MSCustomers.Application.Services
             _validations = validations;
         }
 
-        public async Task<Result<IEnumerable<Customer>>> GetAllCustoemersAsync()
+        public async Task<Result<IEnumerable<Customer>>> GetAllCustomersAsync()
         {
             var customers = await _customerRepository.GetAllCustomersAsync();
 
