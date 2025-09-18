@@ -5,7 +5,7 @@ namespace MSCustomers.Domain.ValueObjects
     public class Address
     {
         [Required(ErrorMessage = "Address Street is required")]
-        [MaxLength(100, ErrorMessage = "Street max lenght is 100")]
+        [MaxLength(100, ErrorMessage = "Street max length is 100")]
         public required string Street { get; set; }
 
         [Required(ErrorMessage = "Address City is required")]
