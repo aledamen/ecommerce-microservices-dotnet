@@ -3,9 +3,10 @@ using Microsoft.EntityFrameworkCore;
 using MSProducts.Application.Repositories;
 using MSProducts.Application.Services;
 using MSProducts.Application.Validators;
-using MSProducts.Domain;
+using MSProducts.Domain.Entities;
 using MSProducts.Infraestructure.Data;
 using MSProducts.Infraestructure.Repositories;
+using MSProducts.Presentation.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -40,6 +41,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseMiddleware<GlobalExceptionMiddleware>();
 
 app.UseHttpsRedirection();
 

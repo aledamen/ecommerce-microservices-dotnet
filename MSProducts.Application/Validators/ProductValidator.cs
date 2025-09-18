@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using MSProducts.Domain;
+using MSProducts.Domain.Entities;
 
 namespace MSProducts.Application.Validators
 {

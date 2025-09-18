@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace MSProducts.Domain
+namespace Kernel
 {
     public class Result
     {
@@ -38,8 +38,5 @@ namespace MSProducts.Domain
 
         [NotNull]
         public T Value => _value! ?? throw new InvalidOperationException("Result has no value");
-
-        //public static Result<T> Success(T value) => new Result<T>(value, true, string.Empty);
-        //public new static Result<T> Fail(string message) => new Result<T>(default!, false, message);
     }
 }

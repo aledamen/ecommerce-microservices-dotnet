@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using MSProducts.Application.Dtos;
+using MSProducts.Domain.Entities;
 using MSProducts.Presentation.Dtos;
 
 namespace MSProducts.Presentation.Mappings
@@ -9,10 +10,13 @@ namespace MSProducts.Presentation.Mappings
         public ProductMappingProfile()
         {
             CreateMap<CreateProductRequest, CreateProductDto>();
-            CreateMap<UpdateProductRequest, UpdateProductDto>();
-
             CreateMap<CreateProductDto, CreateProductRequest>();
+
+            CreateMap<UpdateProductRequest, UpdateProductDto>();
             CreateMap<UpdateProductDto, UpdateProductRequest>();
+
+            CreateMap<ProductResponseDto, Product>();
+            CreateMap<Product, ProductResponseDto>();
         }
     }
 }
