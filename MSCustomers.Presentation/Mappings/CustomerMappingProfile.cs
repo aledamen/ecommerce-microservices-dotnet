@@ -18,7 +18,6 @@ namespace MSCustomers.Presentation.Mappings
             CreateMap<CreateCustomerDto, CustomerResponseDto>();
             CreateMap<CustomerResponseDto, CreateCustomerDto>();
 
-            CreateMap<UpdateCustomerDto, UpdateCustomerDto>();
             CreateMap<UpdateCustomerDto, CustomerResponseDto>();
 
             CreateMap<Customer, CustomerResponseDto>();
