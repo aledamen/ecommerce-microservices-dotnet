@@ -14,4 +14,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MSOrders.Application\MSOrders.Application.csproj" />
+    <ProjectReference Include="..\MSOrders.Domain\MSOrders.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
