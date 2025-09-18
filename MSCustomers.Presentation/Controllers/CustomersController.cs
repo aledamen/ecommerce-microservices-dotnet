@@ -29,7 +29,7 @@ namespace MSCustomers.Presentation.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllCustomers()
         {
-            var result = await _customerService.GetAllCustoemersAsync();
+            var result = await _customerService.GetAllCustomersAsync();
 
             if (!result.IsSuccess)
             {
