@@ -6,6 +6,7 @@ using MSCustomers.Application.Validators;
 using MSCustomers.Domain.Entities;
 using MSCustomers.Infraestructure.Data;
 using MSCustomers.Infraestructure.Repositories;
+using MSCustomers.Presentation.Middlewares;
 using Serilog;
 using Serilog.Events;
 

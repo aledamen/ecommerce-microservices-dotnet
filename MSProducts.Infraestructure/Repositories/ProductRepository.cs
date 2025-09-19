@@ -21,7 +21,7 @@ namespace MSProducts.Infraestructure.Repositories
 
         public async Task<Product?> GetProductByIdAsync(int id)
         {
-            return await _dbContext.Products.FirstOrDefaultAsync(p => p.Id == id);
+            return await _dbContext.Products.FindAsync(id);
         }
 
         public async Task<Product> CreateProductAsync(Product product)

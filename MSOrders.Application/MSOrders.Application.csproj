@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="12.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Kernel\Kernel.csproj" />
+    <ProjectReference Include="..\MSOrders.Domain\MSOrders.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
