@@ -13,7 +13,6 @@ namespace MSOrders.Presentation.Mappings
 
             CreateMap<ProductQuantityRequest, ProductQuantityDto>();
 
-            CreateMap<Order, OrderResponseDto>();
             CreateMap<OrderResponseDto, Order>();
 
             CreateMap<OrderItem, OrderItemResponseDto>();
