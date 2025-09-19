@@ -7,7 +7,7 @@ namespace MSOrders.Application.Dtos
     {
         public int Id { get; init; }
         public DateTime OrderDate { get; init; }
-        public int Total { get; init; }
+        public decimal Total { get; init; }
         public required List<OrderItemResponseDto> Products { get; init; }
         public required ShippingAddress ShippingAddress { get; init; }
         public required string CustomerFirstName { get; init; }
