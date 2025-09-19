@@ -31,7 +31,7 @@ namespace MSOrders.Infraestructure.Clients
             
             var apiResponse = await response.Content.ReadFromJsonAsync<ApiResponse<ProductDto>>();
 
-            return apiResponse?.Data == null;
+            return apiResponse?.Data != null;
         }
     }
 }
