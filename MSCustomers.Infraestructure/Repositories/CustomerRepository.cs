@@ -21,7 +21,7 @@ namespace MSCustomers.Infraestructure.Repositories
 
         public async Task<Customer?> GetCustomerByIdAsync(int id)
         {
-            return await _dbContext.Customers.FirstOrDefaultAsync(c => c.Id == id);
+            return await _dbContext.Customers.FindAsync(id);
         }
 
         public async Task<Customer> CreateCustomerAsync(Customer customer)

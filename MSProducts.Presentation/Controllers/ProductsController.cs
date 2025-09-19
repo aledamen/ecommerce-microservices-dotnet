@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using MSProducts.Application.Dtos;
 using MSProducts.Application.Services;
-using MSProducts.Domain.Entities;
 using MSProducts.Presentation.Contracts;
 using MSProducts.Presentation.Dtos;
 
@@ -67,7 +66,7 @@ namespace MSProducts.Presentation.Controllers
             if(createProductRequest == null)
             {
                 _logger.LogWarning("CreateProductRequest is null");
-                return BadRequest(ApiResponse<Product>.ErrorResponse("Product data is null", 400));
+                return BadRequest(ApiResponse<ProductResponseDto>.ErrorResponse("Product data is null", 400));
             }
 
             var productDto = _mapper.Map<CreateProductDto>(createProductRequest);
@@ -77,7 +76,7 @@ namespace MSProducts.Presentation.Controllers
             if (!result.IsSuccess)
             {
                 _logger.LogError("Error creating product: {Error}", result.Error);
-                return BadRequest(ApiResponse<Product>.ErrorResponse(result.Error, 400));
+                return BadRequest(ApiResponse<ProductResponseDto>.ErrorResponse(result.Error, 400));
             }
                 
             var createdProduct = _mapper.Map<ProductResponseDto>(result.Value);

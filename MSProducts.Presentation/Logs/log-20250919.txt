@@ -1,0 +1,312 @@
+2025-09-19 20:16:39.595 +02:00 [INF] Now listening on: https://localhost:7234
+2025-09-19 20:16:39.640 +02:00 [INF] Now listening on: http://localhost:5134
+2025-09-19 20:16:39.754 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-19 20:16:39.755 +02:00 [INF] Hosting environment: Development
+2025-09-19 20:16:39.757 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSProducts.Presentation
+2025-09-19 20:16:41.298 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/swagger/index.html - null null
+2025-09-19 20:16:41.625 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/swagger/index.html - 200 null text/html;charset=utf-8 336.961ms
+2025-09-19 20:16:41.675 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-19 20:16:41.704 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/_vs/browserLink - null null
+2025-09-19 20:16:41.709 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - 200 16531 application/javascript; charset=utf-8 33.7549ms
+2025-09-19 20:16:41.856 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 151.3241ms
+2025-09-19 20:16:42.005 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/swagger/v1/swagger.json - null null
+2025-09-19 20:16:42.043 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 37.7249ms
+2025-09-19 20:19:12.775 +02:00 [INF] Now listening on: https://localhost:7234
+2025-09-19 20:19:12.821 +02:00 [INF] Now listening on: http://localhost:5134
+2025-09-19 20:19:12.911 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-19 20:19:12.913 +02:00 [INF] Hosting environment: Development
+2025-09-19 20:19:12.914 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSProducts.Presentation
+2025-09-19 20:19:13.523 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/swagger/index.html - null null
+2025-09-19 20:19:13.746 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/swagger/index.html - 200 null text/html;charset=utf-8 233.3857ms
+2025-09-19 20:19:13.791 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-19 20:19:13.806 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/_vs/browserLink - null null
+2025-09-19 20:19:13.807 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - 200 16531 application/javascript; charset=utf-8 16.5152ms
+2025-09-19 20:19:13.861 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 55.5154ms
+2025-09-19 20:19:13.937 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/swagger/v1/swagger.json - null null
+2025-09-19 20:19:13.952 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.077ms
+2025-09-19 20:20:12.862 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/Products - null null
+2025-09-19 20:20:12.886 +02:00 [INF] Executing endpoint 'MSProducts.Presentation.Controllers.ProductsController.GetAllProducts (MSProducts.Presentation)'
+2025-09-19 20:20:12.923 +02:00 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller MSProducts.Presentation.Controllers.ProductsController (MSProducts.Presentation).
+2025-09-19 20:20:13.371 +02:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-09-19 20:20:14.929 +02:00 [INF] Executed DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CreatedAt], [p].[Description], [p].[Name], [p].[Price], [p].[Stock], [p].[UpdatedAt]
+FROM [Products] AS [p]
+2025-09-19 20:20:14.985 +02:00 [INF] Retrieved 0 products
+2025-09-19 20:20:14.999 +02:00 [INF] Executing OkObjectResult, writing value of type 'MSProducts.Presentation.Contracts.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[MSProducts.Application.Dtos.ProductResponseDto, MSProducts.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-19 20:20:15.040 +02:00 [INF] Executed action MSProducts.Presentation.Controllers.ProductsController.GetAllProducts (MSProducts.Presentation) in 2109.1707ms
+2025-09-19 20:20:15.043 +02:00 [INF] Executed endpoint 'MSProducts.Presentation.Controllers.ProductsController.GetAllProducts (MSProducts.Presentation)'
+2025-09-19 20:20:15.057 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/Products - 200 null application/json; charset=utf-8 2196.7604ms
+2025-09-19 20:20:31.331 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7234/api/Products - application/json 79
+2025-09-19 20:20:31.337 +02:00 [INF] Executing endpoint 'MSProducts.Presentation.Controllers.ProductsController.CreateProduct (MSProducts.Presentation)'
+2025-09-19 20:20:31.355 +02:00 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(MSProducts.Presentation.Dtos.CreateProductRequest) on controller MSProducts.Presentation.Controllers.ProductsController (MSProducts.Presentation).
+2025-09-19 20:20:31.842 +02:00 [INF] Executed DbCommand (52ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 300), @p2='?' (Size = 50), @p3='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Products] ([CreatedAt], [Description], [Name], [Price], [Stock], [UpdatedAt])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-09-19 20:20:31.893 +02:00 [INF] Created product with ID 1
+2025-09-19 20:20:31.898 +02:00 [INF] Executing CreatedAtActionResult, writing value of type 'MSProducts.Presentation.Contracts.ApiResponse`1[[MSProducts.Application.Dtos.ProductResponseDto, MSProducts.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-19 20:20:31.939 +02:00 [INF] Executed action MSProducts.Presentation.Controllers.ProductsController.CreateProduct (MSProducts.Presentation) in 581.2996ms
+2025-09-19 20:20:31.942 +02:00 [INF] Executed endpoint 'MSProducts.Presentation.Controllers.ProductsController.CreateProduct (MSProducts.Presentation)'
+2025-09-19 20:20:31.944 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7234/api/Products - 201 null application/json; charset=utf-8 613.5571ms
+2025-09-19 20:23:47.365 +02:00 [INF] Now listening on: https://localhost:7234
+2025-09-19 20:23:47.399 +02:00 [INF] Now listening on: http://localhost:5134
+2025-09-19 20:23:47.479 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-19 20:23:47.480 +02:00 [INF] Hosting environment: Development
+2025-09-19 20:23:47.481 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSProducts.Presentation
+2025-09-19 20:23:48.097 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/swagger/index.html - null null
+2025-09-19 20:23:48.344 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/swagger/index.html - 200 null text/html;charset=utf-8 255.71ms
+2025-09-19 20:23:48.462 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-19 20:23:48.470 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/_vs/browserLink - null null
+2025-09-19 20:23:48.473 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - 200 16531 application/javascript; charset=utf-8 11.8684ms
+2025-09-19 20:23:48.536 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 66.2318ms
+2025-09-19 20:23:48.675 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/swagger/v1/swagger.json - null null
+2025-09-19 20:23:48.692 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.5322ms
+2025-09-19 20:25:42.786 +02:00 [INF] Now listening on: https://localhost:7234
+2025-09-19 20:25:42.866 +02:00 [INF] Now listening on: http://localhost:5134
+2025-09-19 20:25:42.998 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-19 20:25:43.001 +02:00 [INF] Hosting environment: Development
+2025-09-19 20:25:43.003 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSProducts.Presentation
+2025-09-19 20:25:43.163 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/swagger/index.html - null null
+2025-09-19 20:25:43.392 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/swagger/index.html - 200 null text/html;charset=utf-8 235.2398ms
+2025-09-19 20:25:43.437 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-19 20:25:43.444 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - 200 16531 application/javascript; charset=utf-8 6.8213ms
+2025-09-19 20:25:43.446 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/_vs/browserLink - null null
+2025-09-19 20:25:43.497 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.261ms
+2025-09-19 20:25:43.654 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/swagger/v1/swagger.json - null null
+2025-09-19 20:25:43.674 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.4329ms
+2025-09-19 20:28:03.709 +02:00 [INF] Now listening on: https://localhost:7234
+2025-09-19 20:28:03.775 +02:00 [INF] Now listening on: http://localhost:5134
+2025-09-19 20:28:03.947 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-19 20:28:03.952 +02:00 [INF] Hosting environment: Development
+2025-09-19 20:28:03.953 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSProducts.Presentation
+2025-09-19 20:28:04.863 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/swagger/index.html - null null
+2025-09-19 20:28:05.191 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/swagger/index.html - 200 null text/html;charset=utf-8 342.9316ms
+2025-09-19 20:28:05.281 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-19 20:28:05.351 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/_vs/browserLink - null null
+2025-09-19 20:28:05.413 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - 200 16531 application/javascript; charset=utf-8 129.4304ms
+2025-09-19 20:28:05.579 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 229.9677ms
+2025-09-19 20:28:05.812 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/swagger/v1/swagger.json - null null
+2025-09-19 20:28:05.840 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 28.1637ms
+2025-09-19 20:28:53.045 +02:00 [INF] Now listening on: https://localhost:7234
+2025-09-19 20:28:53.097 +02:00 [INF] Now listening on: http://localhost:5134
+2025-09-19 20:28:53.226 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-19 20:28:53.228 +02:00 [INF] Hosting environment: Development
+2025-09-19 20:28:53.230 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSProducts.Presentation
+2025-09-19 20:28:54.056 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/swagger/index.html - null null
+2025-09-19 20:28:54.366 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/swagger/index.html - 200 null text/html;charset=utf-8 322.3646ms
+2025-09-19 20:28:54.393 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-19 20:28:54.411 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - 200 16531 application/javascript; charset=utf-8 17.7071ms
+2025-09-19 20:28:54.434 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/_vs/browserLink - null null
+2025-09-19 20:28:54.514 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 79.7428ms
+2025-09-19 20:28:54.648 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/swagger/v1/swagger.json - null null
+2025-09-19 20:28:54.667 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.3638ms
+2025-09-19 20:47:45.640 +02:00 [INF] Now listening on: https://localhost:7234
+2025-09-19 20:47:45.703 +02:00 [INF] Now listening on: http://localhost:5134
+2025-09-19 20:47:45.864 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-19 20:47:45.866 +02:00 [INF] Hosting environment: Development
+2025-09-19 20:47:45.867 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSProducts.Presentation
+2025-09-19 20:47:46.233 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/swagger/index.html - null null
+2025-09-19 20:47:46.681 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/swagger/index.html - 200 null text/html;charset=utf-8 458.2478ms
+2025-09-19 20:47:46.719 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-19 20:47:46.736 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - 200 16531 application/javascript; charset=utf-8 16.8788ms
+2025-09-19 20:47:46.759 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/_vs/browserLink - null null
+2025-09-19 20:47:46.874 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 114.911ms
+2025-09-19 20:47:47.023 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/swagger/v1/swagger.json - null null
+2025-09-19 20:47:47.044 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.8473ms
+2025-09-19 20:49:46.713 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/products/1 - null null
+2025-09-19 20:49:46.729 +02:00 [INF] Executing endpoint 'MSProducts.Presentation.Controllers.ProductsController.GetProductById (MSProducts.Presentation)'
+2025-09-19 20:49:46.776 +02:00 [INF] Route matched with {action = "GetProductById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductById(Int32) on controller MSProducts.Presentation.Controllers.ProductsController (MSProducts.Presentation).
+2025-09-19 20:49:47.210 +02:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-09-19 20:49:49.057 +02:00 [INF] Executed DbCommand (74ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Description], [p].[Name], [p].[Price], [p].[Stock], [p].[UpdatedAt]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__p_0
+2025-09-19 20:49:49.189 +02:00 [INF] Retrieved product with ID 1
+2025-09-19 20:49:49.199 +02:00 [INF] Executing OkObjectResult, writing value of type 'MSProducts.Presentation.Contracts.ApiResponse`1[[MSProducts.Application.Dtos.ProductResponseDto, MSProducts.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-19 20:49:49.248 +02:00 [INF] Executed action MSProducts.Presentation.Controllers.ProductsController.GetProductById (MSProducts.Presentation) in 2465.1609ms
+2025-09-19 20:49:49.251 +02:00 [INF] Executed endpoint 'MSProducts.Presentation.Controllers.ProductsController.GetProductById (MSProducts.Presentation)'
+2025-09-19 20:49:49.265 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/products/1 - 200 null application/json; charset=utf-8 2553.7732ms
+2025-09-19 20:54:25.308 +02:00 [INF] Now listening on: https://localhost:7234
+2025-09-19 20:54:25.374 +02:00 [INF] Now listening on: http://localhost:5134
+2025-09-19 20:54:25.595 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-19 20:54:25.598 +02:00 [INF] Hosting environment: Development
+2025-09-19 20:54:25.600 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSProducts.Presentation
+2025-09-19 20:54:26.240 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/swagger/index.html - null null
+2025-09-19 20:54:26.694 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/swagger/index.html - 200 null text/html;charset=utf-8 467.7815ms
+2025-09-19 20:54:27.091 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-19 20:54:27.106 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - 200 16531 application/javascript; charset=utf-8 14.7397ms
+2025-09-19 20:54:27.117 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/_vs/browserLink - null null
+2025-09-19 20:54:27.222 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 104.4641ms
+2025-09-19 20:54:27.511 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/swagger/v1/swagger.json - null null
+2025-09-19 20:54:27.533 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.5804ms
+2025-09-19 20:55:26.866 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/products/1 - null null
+2025-09-19 20:55:26.880 +02:00 [INF] Executing endpoint 'MSProducts.Presentation.Controllers.ProductsController.GetProductById (MSProducts.Presentation)'
+2025-09-19 20:55:26.922 +02:00 [INF] Route matched with {action = "GetProductById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductById(Int32) on controller MSProducts.Presentation.Controllers.ProductsController (MSProducts.Presentation).
+2025-09-19 20:55:27.253 +02:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-09-19 20:55:28.654 +02:00 [INF] Executed DbCommand (55ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Description], [p].[Name], [p].[Price], [p].[Stock], [p].[UpdatedAt]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__p_0
+2025-09-19 20:55:28.793 +02:00 [INF] Retrieved product with ID 1
+2025-09-19 20:55:28.805 +02:00 [INF] Executing OkObjectResult, writing value of type 'MSProducts.Presentation.Contracts.ApiResponse`1[[MSProducts.Application.Dtos.ProductResponseDto, MSProducts.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-19 20:55:28.846 +02:00 [INF] Executed action MSProducts.Presentation.Controllers.ProductsController.GetProductById (MSProducts.Presentation) in 1915.782ms
+2025-09-19 20:55:28.851 +02:00 [INF] Executed endpoint 'MSProducts.Presentation.Controllers.ProductsController.GetProductById (MSProducts.Presentation)'
+2025-09-19 20:55:28.869 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/products/1 - 200 null application/json; charset=utf-8 2004.074ms
+2025-09-19 20:57:14.453 +02:00 [INF] Now listening on: https://localhost:7234
+2025-09-19 20:57:14.581 +02:00 [INF] Now listening on: http://localhost:5134
+2025-09-19 20:57:14.764 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-19 20:57:14.766 +02:00 [INF] Hosting environment: Development
+2025-09-19 20:57:14.768 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSProducts.Presentation
+2025-09-19 20:57:15.051 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/swagger/index.html - null null
+2025-09-19 20:57:15.368 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/swagger/index.html - 200 null text/html;charset=utf-8 331.5465ms
+2025-09-19 20:57:15.394 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-19 20:57:15.405 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - 200 16531 application/javascript; charset=utf-8 11.0212ms
+2025-09-19 20:57:15.426 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/_vs/browserLink - null null
+2025-09-19 20:57:15.487 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 61.598ms
+2025-09-19 20:57:15.573 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/swagger/v1/swagger.json - null null
+2025-09-19 20:57:15.595 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 21.4974ms
+2025-09-19 20:57:56.498 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/products/1 - null null
+2025-09-19 20:57:56.512 +02:00 [INF] Executing endpoint 'MSProducts.Presentation.Controllers.ProductsController.GetProductById (MSProducts.Presentation)'
+2025-09-19 20:57:56.551 +02:00 [INF] Route matched with {action = "GetProductById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductById(Int32) on controller MSProducts.Presentation.Controllers.ProductsController (MSProducts.Presentation).
+2025-09-19 20:57:56.929 +02:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-09-19 20:57:58.357 +02:00 [INF] Executed DbCommand (74ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Description], [p].[Name], [p].[Price], [p].[Stock], [p].[UpdatedAt]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__p_0
+2025-09-19 20:57:58.472 +02:00 [INF] Retrieved product with ID 1
+2025-09-19 20:57:58.484 +02:00 [INF] Executing OkObjectResult, writing value of type 'MSProducts.Presentation.Contracts.ApiResponse`1[[MSProducts.Application.Dtos.ProductResponseDto, MSProducts.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-19 20:57:58.517 +02:00 [INF] Executed action MSProducts.Presentation.Controllers.ProductsController.GetProductById (MSProducts.Presentation) in 1958.2071ms
+2025-09-19 20:57:58.520 +02:00 [INF] Executed endpoint 'MSProducts.Presentation.Controllers.ProductsController.GetProductById (MSProducts.Presentation)'
+2025-09-19 20:57:58.533 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/products/1 - 200 null application/json; charset=utf-8 2036.7384ms
+2025-09-19 20:58:26.972 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7234/api/products/1/decrease-stock - application/json; charset=utf-8 null
+2025-09-19 20:58:26.978 +02:00 [INF] Executing endpoint 'MSProducts.Presentation.Controllers.ProductsController.DecreaseStock (MSProducts.Presentation)'
+2025-09-19 20:58:26.986 +02:00 [INF] Route matched with {action = "DecreaseStock", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DecreaseStock(Int32, MSProducts.Presentation.Dtos.DecreaseStockRequest) on controller MSProducts.Presentation.Controllers.ProductsController (MSProducts.Presentation).
+2025-09-19 20:58:29.702 +02:00 [INF] Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Description], [p].[Name], [p].[Price], [p].[Stock], [p].[UpdatedAt]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__p_0
+2025-09-19 20:58:29.825 +02:00 [INF] Executed DbCommand (21ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (Size = 300), @p2='?' (Size = 50), @p3='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Products] SET [CreatedAt] = @p0, [Description] = @p1, [Name] = @p2, [Price] = @p3, [Stock] = @p4, [UpdatedAt] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2025-09-19 20:58:29.841 +02:00 [INF] Decreased stock of product ID 1 by 2
+2025-09-19 20:58:29.845 +02:00 [INF] Executing OkObjectResult, writing value of type 'MSProducts.Presentation.Contracts.ApiResponse`1[[MSProducts.Application.Dtos.ProductResponseDto, MSProducts.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-19 20:58:29.847 +02:00 [INF] Executed action MSProducts.Presentation.Controllers.ProductsController.DecreaseStock (MSProducts.Presentation) in 2857.4692ms
+2025-09-19 20:58:29.849 +02:00 [INF] Executed endpoint 'MSProducts.Presentation.Controllers.ProductsController.DecreaseStock (MSProducts.Presentation)'
+2025-09-19 20:58:29.851 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7234/api/products/1/decrease-stock - 200 null application/json; charset=utf-8 2879.2561ms
+2025-09-19 21:02:00.394 +02:00 [INF] Now listening on: https://localhost:7234
+2025-09-19 21:02:00.445 +02:00 [INF] Now listening on: http://localhost:5134
+2025-09-19 21:02:00.573 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-19 21:02:00.575 +02:00 [INF] Hosting environment: Development
+2025-09-19 21:02:00.576 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSProducts.Presentation
+2025-09-19 21:02:01.504 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/swagger/index.html - null null
+2025-09-19 21:02:01.880 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/swagger/index.html - 200 null text/html;charset=utf-8 395.2593ms
+2025-09-19 21:02:01.952 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-19 21:02:01.972 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - 200 16531 application/javascript; charset=utf-8 19.9059ms
+2025-09-19 21:02:01.985 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/_vs/browserLink - null null
+2025-09-19 21:02:02.093 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 108.7836ms
+2025-09-19 21:02:02.449 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/swagger/v1/swagger.json - null null
+2025-09-19 21:02:02.471 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 21.5403ms
+2025-09-19 21:02:21.039 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/products/1 - null null
+2025-09-19 21:02:21.056 +02:00 [INF] Executing endpoint 'MSProducts.Presentation.Controllers.ProductsController.GetProductById (MSProducts.Presentation)'
+2025-09-19 21:02:21.111 +02:00 [INF] Route matched with {action = "GetProductById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductById(Int32) on controller MSProducts.Presentation.Controllers.ProductsController (MSProducts.Presentation).
+2025-09-19 21:02:21.475 +02:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-09-19 21:02:22.876 +02:00 [INF] Executed DbCommand (60ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Description], [p].[Name], [p].[Price], [p].[Stock], [p].[UpdatedAt]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__p_0
+2025-09-19 21:02:22.989 +02:00 [INF] Retrieved product with ID 1
+2025-09-19 21:02:23.000 +02:00 [INF] Executing OkObjectResult, writing value of type 'MSProducts.Presentation.Contracts.ApiResponse`1[[MSProducts.Application.Dtos.ProductResponseDto, MSProducts.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-19 21:02:23.029 +02:00 [INF] Executed action MSProducts.Presentation.Controllers.ProductsController.GetProductById (MSProducts.Presentation) in 1910.6027ms
+2025-09-19 21:02:23.033 +02:00 [INF] Executed endpoint 'MSProducts.Presentation.Controllers.ProductsController.GetProductById (MSProducts.Presentation)'
+2025-09-19 21:02:23.047 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/products/1 - 200 null application/json; charset=utf-8 2008.6589ms
+2025-09-19 21:02:29.883 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7234/api/products/1/decrease-stock - application/json; charset=utf-8 null
+2025-09-19 21:02:29.888 +02:00 [INF] Executing endpoint 'MSProducts.Presentation.Controllers.ProductsController.DecreaseStock (MSProducts.Presentation)'
+2025-09-19 21:02:29.897 +02:00 [INF] Route matched with {action = "DecreaseStock", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DecreaseStock(Int32, MSProducts.Presentation.Dtos.DecreaseStockRequest) on controller MSProducts.Presentation.Controllers.ProductsController (MSProducts.Presentation).
+2025-09-19 21:02:30.735 +02:00 [INF] Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Description], [p].[Name], [p].[Price], [p].[Stock], [p].[UpdatedAt]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__p_0
+2025-09-19 21:02:30.859 +02:00 [INF] Executed DbCommand (18ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (Size = 300), @p2='?' (Size = 50), @p3='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Products] SET [CreatedAt] = @p0, [Description] = @p1, [Name] = @p2, [Price] = @p3, [Stock] = @p4, [UpdatedAt] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2025-09-19 21:02:30.876 +02:00 [INF] Decreased stock of product ID 1 by 2
+2025-09-19 21:02:30.879 +02:00 [INF] Executing OkObjectResult, writing value of type 'MSProducts.Presentation.Contracts.ApiResponse`1[[MSProducts.Application.Dtos.ProductResponseDto, MSProducts.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-19 21:02:30.881 +02:00 [INF] Executed action MSProducts.Presentation.Controllers.ProductsController.DecreaseStock (MSProducts.Presentation) in 980.7803ms
+2025-09-19 21:02:30.883 +02:00 [INF] Executed endpoint 'MSProducts.Presentation.Controllers.ProductsController.DecreaseStock (MSProducts.Presentation)'
+2025-09-19 21:02:30.885 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7234/api/products/1/decrease-stock - 200 null application/json; charset=utf-8 1001.6195ms
+2025-09-19 21:06:43.744 +02:00 [INF] Now listening on: https://localhost:7234
+2025-09-19 21:06:43.826 +02:00 [INF] Now listening on: http://localhost:5134
+2025-09-19 21:06:44.015 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-19 21:06:44.018 +02:00 [INF] Hosting environment: Development
+2025-09-19 21:06:44.020 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSProducts.Presentation
+2025-09-19 21:06:44.767 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/swagger/index.html - null null
+2025-09-19 21:06:45.198 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/swagger/index.html - 200 null text/html;charset=utf-8 446.8362ms
+2025-09-19 21:06:45.308 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-19 21:06:45.352 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/_vs/browserLink - null null
+2025-09-19 21:06:45.389 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/_framework/aspnetcore-browser-refresh.js - 200 16531 application/javascript; charset=utf-8 81.6931ms
+2025-09-19 21:06:45.472 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 119.8958ms
+2025-09-19 21:06:45.724 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/swagger/v1/swagger.json - null null
+2025-09-19 21:06:45.751 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.717ms
+2025-09-19 21:07:08.046 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/products/1 - null null
+2025-09-19 21:07:08.057 +02:00 [INF] Executing endpoint 'MSProducts.Presentation.Controllers.ProductsController.GetProductById (MSProducts.Presentation)'
+2025-09-19 21:07:08.096 +02:00 [INF] Route matched with {action = "GetProductById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductById(Int32) on controller MSProducts.Presentation.Controllers.ProductsController (MSProducts.Presentation).
+2025-09-19 21:07:08.418 +02:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-09-19 21:07:09.719 +02:00 [INF] Executed DbCommand (64ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Description], [p].[Name], [p].[Price], [p].[Stock], [p].[UpdatedAt]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__p_0
+2025-09-19 21:07:09.825 +02:00 [INF] Retrieved product with ID 1
+2025-09-19 21:07:09.838 +02:00 [INF] Executing OkObjectResult, writing value of type 'MSProducts.Presentation.Contracts.ApiResponse`1[[MSProducts.Application.Dtos.ProductResponseDto, MSProducts.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-19 21:07:09.866 +02:00 [INF] Executed action MSProducts.Presentation.Controllers.ProductsController.GetProductById (MSProducts.Presentation) in 1763.4407ms
+2025-09-19 21:07:09.871 +02:00 [INF] Executed endpoint 'MSProducts.Presentation.Controllers.ProductsController.GetProductById (MSProducts.Presentation)'
+2025-09-19 21:07:09.881 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/products/1 - 200 null application/json; charset=utf-8 1836.4854ms
+2025-09-19 21:07:17.750 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7234/api/products/1/decrease-stock - application/json; charset=utf-8 null
+2025-09-19 21:07:17.754 +02:00 [INF] Executing endpoint 'MSProducts.Presentation.Controllers.ProductsController.DecreaseStock (MSProducts.Presentation)'
+2025-09-19 21:07:17.761 +02:00 [INF] Route matched with {action = "DecreaseStock", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DecreaseStock(Int32, MSProducts.Presentation.Dtos.DecreaseStockRequest) on controller MSProducts.Presentation.Controllers.ProductsController (MSProducts.Presentation).
+2025-09-19 21:07:17.835 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Description], [p].[Name], [p].[Price], [p].[Stock], [p].[UpdatedAt]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__p_0
+2025-09-19 21:07:17.960 +02:00 [INF] Executed DbCommand (19ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (Size = 300), @p2='?' (Size = 50), @p3='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Products] SET [CreatedAt] = @p0, [Description] = @p1, [Name] = @p2, [Price] = @p3, [Stock] = @p4, [UpdatedAt] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2025-09-19 21:07:17.980 +02:00 [INF] Decreased stock of product ID 1 by 2
+2025-09-19 21:07:17.983 +02:00 [INF] Executing OkObjectResult, writing value of type 'MSProducts.Presentation.Contracts.ApiResponse`1[[MSProducts.Application.Dtos.ProductResponseDto, MSProducts.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-19 21:07:17.986 +02:00 [INF] Executed action MSProducts.Presentation.Controllers.ProductsController.DecreaseStock (MSProducts.Presentation) in 221.7958ms
+2025-09-19 21:07:17.988 +02:00 [INF] Executed endpoint 'MSProducts.Presentation.Controllers.ProductsController.DecreaseStock (MSProducts.Presentation)'
+2025-09-19 21:07:17.989 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7234/api/products/1/decrease-stock - 200 null application/json; charset=utf-8 239.5861ms
+2025-09-19 21:07:40.768 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/Products/1 - null null
+2025-09-19 21:07:40.781 +02:00 [INF] Executing endpoint 'MSProducts.Presentation.Controllers.ProductsController.GetProductById (MSProducts.Presentation)'
+2025-09-19 21:07:40.784 +02:00 [INF] Route matched with {action = "GetProductById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductById(Int32) on controller MSProducts.Presentation.Controllers.ProductsController (MSProducts.Presentation).
+2025-09-19 21:07:40.875 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Description], [p].[Name], [p].[Price], [p].[Stock], [p].[UpdatedAt]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__p_0
+2025-09-19 21:07:40.886 +02:00 [INF] Retrieved product with ID 1
+2025-09-19 21:07:40.890 +02:00 [INF] Executing OkObjectResult, writing value of type 'MSProducts.Presentation.Contracts.ApiResponse`1[[MSProducts.Application.Dtos.ProductResponseDto, MSProducts.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-19 21:07:40.893 +02:00 [INF] Executed action MSProducts.Presentation.Controllers.ProductsController.GetProductById (MSProducts.Presentation) in 104.5996ms
+2025-09-19 21:07:40.895 +02:00 [INF] Executed endpoint 'MSProducts.Presentation.Controllers.ProductsController.GetProductById (MSProducts.Presentation)'
+2025-09-19 21:07:40.898 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/Products/1 - 200 null application/json; charset=utf-8 130.1673ms
+2025-09-19 21:07:53.306 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7234/api/products/1 - null null
+2025-09-19 21:07:53.311 +02:00 [INF] Executing endpoint 'MSProducts.Presentation.Controllers.ProductsController.GetProductById (MSProducts.Presentation)'
+2025-09-19 21:07:53.314 +02:00 [INF] Route matched with {action = "GetProductById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductById(Int32) on controller MSProducts.Presentation.Controllers.ProductsController (MSProducts.Presentation).
+2025-09-19 21:07:53.324 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Description], [p].[Name], [p].[Price], [p].[Stock], [p].[UpdatedAt]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__p_0
+2025-09-19 21:07:53.330 +02:00 [INF] Retrieved product with ID 1
+2025-09-19 21:07:53.332 +02:00 [INF] Executing OkObjectResult, writing value of type 'MSProducts.Presentation.Contracts.ApiResponse`1[[MSProducts.Application.Dtos.ProductResponseDto, MSProducts.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-19 21:07:53.335 +02:00 [INF] Executed action MSProducts.Presentation.Controllers.ProductsController.GetProductById (MSProducts.Presentation) in 18.4419ms
+2025-09-19 21:07:53.338 +02:00 [INF] Executed endpoint 'MSProducts.Presentation.Controllers.ProductsController.GetProductById (MSProducts.Presentation)'
+2025-09-19 21:07:53.340 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7234/api/products/1 - 200 null application/json; charset=utf-8 33.8103ms
