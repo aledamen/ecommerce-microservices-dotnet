@@ -1,0 +1,231 @@
+2025-09-24 19:02:09.004 +02:00 [INF] Now listening on: https://localhost:7240
+2025-09-24 19:02:09.082 +02:00 [INF] Now listening on: http://localhost:5184
+2025-09-24 19:02:09.266 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-24 19:02:09.269 +02:00 [INF] Hosting environment: Development
+2025-09-24 19:02:09.272 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSOrders.Presentation
+2025-09-24 19:02:09.527 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/index.html - null null
+2025-09-24 19:02:09.885 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/index.html - 200 null text/html;charset=utf-8 358.6984ms
+2025-09-24 19:02:09.980 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-24 19:02:09.995 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_vs/browserLink - null null
+2025-09-24 19:02:10.005 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 24.5717ms
+2025-09-24 19:02:10.100 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_vs/browserLink - 200 null text/javascript; charset=UTF-8 105.3299ms
+2025-09-24 19:02:10.171 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - null null
+2025-09-24 19:02:10.194 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.5971ms
+2025-09-24 19:04:22.084 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/index.html - null null
+2025-09-24 19:04:22.105 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/index.html - 200 null text/html;charset=utf-8 20.6926ms
+2025-09-24 19:04:22.145 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-24 19:04:22.150 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 4.9776ms
+2025-09-24 19:04:22.155 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_vs/browserLink - null null
+2025-09-24 19:04:22.168 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.6437ms
+2025-09-24 19:04:22.239 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - null null
+2025-09-24 19:04:22.247 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.1107ms
+2025-09-24 19:07:37.176 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/index.html - null null
+2025-09-24 19:07:37.221 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/index.html - 200 null text/html;charset=utf-8 45.4126ms
+2025-09-24 19:07:37.278 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-24 19:07:37.283 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 4.3083ms
+2025-09-24 19:07:37.296 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_vs/browserLink - null null
+2025-09-24 19:07:37.314 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_vs/browserLink - 200 null text/javascript; charset=UTF-8 17.5612ms
+2025-09-24 19:07:37.463 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - null null
+2025-09-24 19:07:37.472 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.4891ms
+2025-09-24 19:07:58.153 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/index.html - null null
+2025-09-24 19:07:58.163 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/index.html - 200 null text/html;charset=utf-8 9.6308ms
+2025-09-24 19:07:58.216 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-24 19:07:58.220 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 4.4788ms
+2025-09-24 19:07:58.236 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_vs/browserLink - null null
+2025-09-24 19:07:58.252 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.7559ms
+2025-09-24 19:07:58.352 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - null null
+2025-09-24 19:07:58.359 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 6.9008ms
+2025-09-24 19:10:54.551 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/index.html - null null
+2025-09-24 19:10:54.587 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/index.html - 200 null text/html;charset=utf-8 35.8212ms
+2025-09-24 19:10:54.620 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_vs/browserLink - null null
+2025-09-24 19:10:54.629 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_vs/browserLink - 200 null text/javascript; charset=UTF-8 9.3686ms
+2025-09-24 19:10:54.635 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-24 19:10:54.639 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 3.847ms
+2025-09-24 19:10:54.755 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - null null
+2025-09-24 19:10:54.762 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 6.8779ms
+2025-09-24 19:12:10.567 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/index.html - null null
+2025-09-24 19:12:10.611 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/index.html - 200 null text/html;charset=utf-8 44.6727ms
+2025-09-24 19:12:10.657 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-24 19:12:10.657 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_vs/browserLink - null null
+2025-09-24 19:12:10.661 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 3.7731ms
+2025-09-24 19:12:10.692 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.3285ms
+2025-09-24 19:12:10.799 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - null null
+2025-09-24 19:12:10.804 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 5.7448ms
+2025-09-24 19:14:30.847 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/index.html - null null
+2025-09-24 19:14:30.873 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/index.html - 200 null text/html;charset=utf-8 26.2819ms
+2025-09-24 19:14:30.940 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-24 19:14:30.948 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 7.9526ms
+2025-09-24 19:14:30.971 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_vs/browserLink - null null
+2025-09-24 19:14:30.993 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.8581ms
+2025-09-24 19:14:31.094 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - null null
+2025-09-24 19:14:31.100 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 6.3173ms
+2025-09-24 20:11:28.293 +02:00 [INF] Now listening on: https://localhost:7240
+2025-09-24 20:11:28.331 +02:00 [INF] Now listening on: http://localhost:5184
+2025-09-24 20:11:28.446 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-24 20:11:28.448 +02:00 [INF] Hosting environment: Development
+2025-09-24 20:11:28.449 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSOrders.Presentation
+2025-09-24 20:11:29.186 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/index.html - null null
+2025-09-24 20:11:29.404 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/index.html - 200 null text/html;charset=utf-8 219.8023ms
+2025-09-24 20:11:29.513 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-24 20:11:29.531 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 18.3081ms
+2025-09-24 20:11:29.542 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_vs/browserLink - null null
+2025-09-24 20:11:29.674 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_vs/browserLink - 200 null text/javascript; charset=UTF-8 131.7184ms
+2025-09-24 20:11:29.772 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - null null
+2025-09-24 20:11:29.833 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 61.3059ms
+2025-09-24 20:35:26.138 +02:00 [INF] Now listening on: https://localhost:7240
+2025-09-24 20:35:26.230 +02:00 [INF] Now listening on: http://localhost:5184
+2025-09-24 20:35:26.999 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-24 20:35:27.003 +02:00 [INF] Hosting environment: Development
+2025-09-24 20:35:27.006 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSOrders.Presentation
+2025-09-24 20:35:27.607 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/index.html - null null
+2025-09-24 20:35:28.080 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/index.html - 200 null text/html;charset=utf-8 493.4826ms
+2025-09-24 20:35:28.111 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-24 20:35:28.138 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 26.9144ms
+2025-09-24 20:35:28.160 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_vs/browserLink - null null
+2025-09-24 20:35:28.268 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_vs/browserLink - 200 null text/javascript; charset=UTF-8 107.9098ms
+2025-09-24 20:35:28.438 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - null null
+2025-09-24 20:35:28.487 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 49.0531ms
+2025-09-24 20:36:32.028 +02:00 [INF] Now listening on: https://localhost:7240
+2025-09-24 20:36:32.104 +02:00 [INF] Now listening on: http://localhost:5184
+2025-09-24 20:36:32.411 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-24 20:36:32.415 +02:00 [INF] Hosting environment: Development
+2025-09-24 20:36:32.421 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSOrders.Presentation
+2025-09-24 20:36:33.172 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/index.html - null null
+2025-09-24 20:36:33.759 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/index.html - 200 null text/html;charset=utf-8 590.3472ms
+2025-09-24 20:36:33.884 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-24 20:36:33.884 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_vs/browserLink - null null
+2025-09-24 20:36:33.899 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 15.5571ms
+2025-09-24 20:36:34.040 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_vs/browserLink - 200 null text/javascript; charset=UTF-8 156.5228ms
+2025-09-24 20:36:34.222 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - null null
+2025-09-24 20:36:34.265 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 42.9885ms
+2025-09-24 20:37:58.124 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/index.html - null null
+2025-09-24 20:37:58.149 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/index.html - 200 null text/html;charset=utf-8 24.3517ms
+2025-09-24 20:37:58.194 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-24 20:37:58.197 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_vs/browserLink - null null
+2025-09-24 20:37:58.200 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 5.7655ms
+2025-09-24 20:37:58.246 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.3358ms
+2025-09-24 20:37:58.302 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - null null
+2025-09-24 20:37:58.311 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.2819ms
+2025-09-24 20:38:23.720 +02:00 [INF] Now listening on: https://localhost:7240
+2025-09-24 20:38:23.779 +02:00 [INF] Now listening on: http://localhost:5184
+2025-09-24 20:38:23.915 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-24 20:38:23.917 +02:00 [INF] Hosting environment: Development
+2025-09-24 20:38:23.919 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSOrders.Presentation
+2025-09-24 20:38:25.796 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/index.html - null null
+2025-09-24 20:38:26.263 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/index.html - 200 null text/html;charset=utf-8 471.3622ms
+2025-09-24 20:38:26.398 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-24 20:38:26.444 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_vs/browserLink - null null
+2025-09-24 20:38:26.456 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 57.7512ms
+2025-09-24 20:38:26.569 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_vs/browserLink - 200 null text/javascript; charset=UTF-8 124.8038ms
+2025-09-24 20:38:26.821 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - null null
+2025-09-24 20:38:26.841 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.8929ms
+2025-09-24 20:39:52.464 +02:00 [INF] Now listening on: https://localhost:7240
+2025-09-24 20:39:52.536 +02:00 [INF] Now listening on: http://localhost:5184
+2025-09-24 20:39:52.773 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-24 20:39:52.795 +02:00 [INF] Hosting environment: Development
+2025-09-24 20:39:52.844 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSOrders.Presentation
+2025-09-24 20:39:53.273 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/index.html - null null
+2025-09-24 20:39:53.832 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/index.html - 200 null text/html;charset=utf-8 570.3238ms
+2025-09-24 20:39:53.868 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-24 20:39:53.891 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 22.4967ms
+2025-09-24 20:39:53.902 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_vs/browserLink - null null
+2025-09-24 20:39:53.974 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_vs/browserLink - 200 null text/javascript; charset=UTF-8 72.2263ms
+2025-09-24 20:39:54.043 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - null null
+2025-09-24 20:39:54.062 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.451ms
+2025-09-24 20:41:33.020 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/index.html - null null
+2025-09-24 20:41:33.052 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/index.html - 200 null text/html;charset=utf-8 32.5273ms
+2025-09-24 20:41:33.122 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-24 20:41:33.127 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 5.1956ms
+2025-09-24 20:41:33.136 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_vs/browserLink - null null
+2025-09-24 20:41:33.157 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.8569ms
+2025-09-24 20:41:33.281 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - null null
+2025-09-24 20:41:33.291 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.871ms
+2025-09-24 20:43:49.742 +02:00 [INF] Now listening on: https://localhost:7240
+2025-09-24 20:43:49.829 +02:00 [INF] Now listening on: http://localhost:5184
+2025-09-24 20:43:49.967 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-24 20:43:49.969 +02:00 [INF] Hosting environment: Development
+2025-09-24 20:43:49.972 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSOrders.Presentation
+2025-09-24 20:43:51.111 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/index.html - null null
+2025-09-24 20:43:51.630 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/index.html - 200 null text/html;charset=utf-8 523.6669ms
+2025-09-24 20:43:51.845 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-24 20:43:51.910 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_vs/browserLink - null null
+2025-09-24 20:43:51.955 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 109.914ms
+2025-09-24 20:43:52.086 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_vs/browserLink - 200 null text/javascript; charset=UTF-8 175.5873ms
+2025-09-24 20:43:52.200 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - null null
+2025-09-24 20:43:52.245 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 44.3144ms
+2025-09-24 20:45:07.685 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/index.html - null null
+2025-09-24 20:45:07.713 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/index.html - 200 null text/html;charset=utf-8 27.5145ms
+2025-09-24 20:45:07.764 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-24 20:45:07.765 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_vs/browserLink - null null
+2025-09-24 20:45:07.768 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 4.2352ms
+2025-09-24 20:45:07.792 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_vs/browserLink - 200 null text/javascript; charset=UTF-8 26.8233ms
+2025-09-24 20:45:07.883 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - null null
+2025-09-24 20:45:07.891 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.2122ms
+2025-09-24 20:46:28.385 +02:00 [INF] Now listening on: https://localhost:7240
+2025-09-24 20:46:28.458 +02:00 [INF] Now listening on: http://localhost:5184
+2025-09-24 20:46:28.669 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-24 20:46:28.679 +02:00 [INF] Hosting environment: Development
+2025-09-24 20:46:28.690 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSOrders.Presentation
+2025-09-24 20:46:29.198 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/index.html - null null
+2025-09-24 20:46:29.789 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/index.html - 200 null text/html;charset=utf-8 590.814ms
+2025-09-24 20:46:29.863 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-24 20:46:29.919 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_vs/browserLink - null null
+2025-09-24 20:46:29.978 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 114.9448ms
+2025-09-24 20:46:30.059 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_vs/browserLink - 200 null text/javascript; charset=UTF-8 140.1679ms
+2025-09-24 20:46:30.334 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - null null
+2025-09-24 20:46:30.372 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 37.791ms
+2025-09-24 20:47:53.871 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/index.html - null null
+2025-09-24 20:47:53.918 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/index.html - 200 null text/html;charset=utf-8 46.4874ms
+2025-09-24 20:47:53.968 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-24 20:47:53.972 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_vs/browserLink - null null
+2025-09-24 20:47:53.973 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 4.9131ms
+2025-09-24 20:47:53.993 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.3946ms
+2025-09-24 20:47:54.089 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - null null
+2025-09-24 20:47:54.099 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.5132ms
+2025-09-24 20:53:23.228 +02:00 [INF] Now listening on: https://localhost:7240
+2025-09-24 20:53:23.285 +02:00 [INF] Now listening on: http://localhost:5184
+2025-09-24 20:53:23.457 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-24 20:53:23.460 +02:00 [INF] Hosting environment: Development
+2025-09-24 20:53:23.462 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSOrders.Presentation
+2025-09-24 20:53:24.695 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/index.html - null null
+2025-09-24 20:53:25.309 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/index.html - 200 null text/html;charset=utf-8 617.879ms
+2025-09-24 20:53:25.353 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-24 20:53:25.379 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 25.8141ms
+2025-09-24 20:53:25.420 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_vs/browserLink - null null
+2025-09-24 20:53:25.622 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_vs/browserLink - 200 null text/javascript; charset=UTF-8 201.2127ms
+2025-09-24 20:53:25.714 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - null null
+2025-09-24 20:53:25.755 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 40.6398ms
+2025-09-24 20:55:04.874 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/index.html - null null
+2025-09-24 20:55:04.903 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/index.html - 200 null text/html;charset=utf-8 29.1699ms
+2025-09-24 20:55:04.962 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-24 20:55:04.969 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 6.6299ms
+2025-09-24 20:55:04.987 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_vs/browserLink - null null
+2025-09-24 20:55:05.014 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.6217ms
+2025-09-24 20:55:05.098 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - null null
+2025-09-24 20:55:05.107 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.1108ms
+2025-09-24 20:58:41.352 +02:00 [INF] Now listening on: https://localhost:7240
+2025-09-24 20:58:41.480 +02:00 [INF] Now listening on: http://localhost:5184
+2025-09-24 20:58:41.756 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-24 20:58:41.770 +02:00 [INF] Hosting environment: Development
+2025-09-24 20:58:41.774 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSOrders.Presentation
+2025-09-24 20:58:42.407 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/index.html - null null
+2025-09-24 20:58:42.813 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/index.html - 200 null text/html;charset=utf-8 408.0074ms
+2025-09-24 20:58:43.021 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-24 20:58:43.039 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_vs/browserLink - null null
+2025-09-24 20:58:43.042 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 21.7452ms
+2025-09-24 20:58:43.188 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_vs/browserLink - 200 null text/javascript; charset=UTF-8 149.7188ms
+2025-09-24 20:58:43.358 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - null null
+2025-09-24 20:58:43.377 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.648ms
+2025-09-24 21:00:17.600 +02:00 [INF] Now listening on: https://localhost:7240
+2025-09-24 21:00:17.684 +02:00 [INF] Now listening on: http://localhost:5184
+2025-09-24 21:00:17.898 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-24 21:00:17.929 +02:00 [INF] Hosting environment: Development
+2025-09-24 21:00:17.935 +02:00 [INF] Content root path: C:\Users\ale\Desktop\fak\lab-app-web-servidor\ecommerce-microservices-dotnet\MSOrders.Presentation
+2025-09-24 21:00:18.581 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/index.html - null null
+2025-09-24 21:00:18.906 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/index.html - 200 null text/html;charset=utf-8 331.9395ms
+2025-09-24 21:00:18.946 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-24 21:00:18.960 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 14.4453ms
+2025-09-24 21:00:18.972 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/_vs/browserLink - null null
+2025-09-24 21:00:19.052 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/_vs/browserLink - 200 null text/javascript; charset=UTF-8 79.6421ms
+2025-09-24 21:00:19.132 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - null null
+2025-09-24 21:00:19.150 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7240/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.7325ms

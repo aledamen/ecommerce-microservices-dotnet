@@ -1,0 +1,263 @@
+﻿@page "/customers"
+@using ecommerce.frontend.Dtos
+@using ecommerce.frontend.Dtos.Customers
+@using ecommerce.frontend.Dtos.Orders
+@using ecommerce.frontend.Interfaces
+@inject ICustomerService _customerService
+@inject IOrderService _orderService
+@rendermode InteractiveServer
+
+<PageTitle>Customers Section</PageTitle>
+
+<h1>Customers Section</h1>
+<p>Manage customers</p>
+
+<div class="mb-3 p-3 border rounded bg-light">
+    <div class="row g-2">
+        <div class="col">
+            <input @bind="firstName" class="form-control" placeholder="First Name" />
+        </div>
+        <div class="col">
+            <input @bind="lastName" class="form-control" placeholder="Last Name" />
+        </div>
+        <div class="col">
+            <input type="email" @bind="email" class="form-control" placeholder="Email" />
+        </div>
+        <div class="col">
+            <input type="tel" @bind="phoneNumber" class="form-control" placeholder="Phone Number" />
+        </div>
+    </div>
+    <div class="row g-2 mt-2">
+        <div class="col">
+            <input @bind="street" class="form-control" placeholder="Street" />
+        </div>
+        <div class="col">
+            <input type="number" @bind="number" class="form-control" placeholder="Number" />
+        </div>
+        <div class="col">
+            <input @bind="city" class="form-control" placeholder="City" />
+        </div>
+        <div class="col-auto">
+            <button type="button" class="btn btn-primary" @onclick="AddCustomer">
+                <span class="oi oi-plus" aria-hidden="true"></span> Add
+            </button>
+        </div>
+    </div>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Street</th>
+            <th>Number</th>
+            <th>City</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in pagedCustomers)
+        {
+            <tr>
+                <td>@c.Id</td>
+                <td><input @bind="c.FirstName" class="form-control form-control-sm" /></td>
+                <td><input @bind="c.LastName" class="form-control form-control-sm" /></td>
+                <td><input @bind="c.Email" class="form-control form-control-sm" /></td>
+                <td><input @bind="c.PhoneNumber" class="form-control form-control-sm" /></td>
+                <td><input @bind="c.Address.Street" class="form-control form-control-sm" /></td>
+                <td><input type="number" @bind="c.Address.Number" class="form-control form-control-sm" /></td>
+                <td><input @bind="c.Address.City" class="form-control form-control-sm" /></td>
+                <td class="d-flex gap-1">
+                    <button class="btn btn-sm btn-success" @onclick="() => UpdateCustomer(c.Id, c)">
+                        <span class="oi oi-check" aria-hidden="true">UPDATE</span>
+                    </button>
+                    <button class="btn btn-sm btn-danger" @onclick="() => DeleteCustomer(c.Id)">
+                        <span class="oi oi-trash" aria-hidden="true">DEL</span>
+                    </button>
+                    <button class="btn btn-sm btn-info" @onclick="() => ToggleOrders(c.Id)">
+                        Orders
+                    </button>
+                </td>
+            </tr>
+
+            @if (expandedCustomerId == c.Id)
+            {
+                <tr>
+                    <td colspan="9">
+                        @if (customerOrders.TryGetValue(c.Id, out var orders) && orders.Any())
+                        {
+                            <table class="table table-bordered table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Order Id</th>
+                                        <th>Date</th>
+                                        <th>Total</th>
+                                        <th>Products</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var o in orders)
+                                    {
+                                        <tr>
+                                            <td>@o.Id</td>
+                                            <td>@o.OrderDate.ToShortDateString()</td>
+                                            <td>@o.Total</td>
+                                            <td>
+                                            <td>
+                                                <ul>
+                                                    @foreach (var item in o.Orders)
+                                                    {
+                                                        <li>@($"{item.ProductName} (x{item.Quantity}) - {item.SubTotal:0.00}")</li>
+                                                    }
+                                                </ul>
+                                            </td>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        }
+                        else
+                        {
+                            <p>No orders found for this customer.</p>
+                        }
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+<nav>
+    <ul class="pagination">
+        <li class="page-item @(currentPage == 1 ? "disabled" : "")">
+            <button class="page-link" @onclick="PreviousPage">Previous</button>
+        </li>
+
+        @for (int i = 1; i <= totalPages; i++)
+        {
+            var pageIndex = i;
+            <li class="page-item @(currentPage == pageIndex ? "active" : "")">
+                <button class="page-link" @onclick="() => GoToPage(pageIndex)">@pageIndex</button>
+            </li>
+        }
+
+        <li class="page-item @(currentPage == totalPages ? "disabled" : "")">
+            <button class="page-link" @onclick="NextPage">Next</button>
+        </li>
+    </ul>
+</nav>
+
+@code {
+    private List<CustomerDto> customers = new();
+    private List<CustomerDto> pagedCustomers => customers.Skip((currentPage - 1) * pageSize).Take(pageSize).ToList();
+
+    private string firstName = string.Empty;
+    private string lastName = string.Empty;
+    private string email = string.Empty;
+    private string phoneNumber = string.Empty;
+
+    private string street = string.Empty;
+    private int number = 0;
+    private string city = string.Empty;
+
+    private int currentPage = 1;
+    private int pageSize = 5;
+    private int totalPages => (int)Math.Ceiling((double)customers.Count / pageSize);
+
+    private int? expandedCustomerId = null;
+    private Dictionary<int, List<OrderDto>> customerOrders = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await RefreshCustomers();
+    }
+
+    private async Task RefreshCustomers()
+    {
+        customers = await _customerService.GetCustomersAsync();
+        if (currentPage > totalPages) currentPage = totalPages;
+    }
+
+    private async Task AddCustomer()
+    {
+        if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(street) || string.IsNullOrEmpty(city) || number <= 0)
+            return;
+
+        var newCustomer = new CreateCustomerDto
+        {
+            FirstName = firstName,
+            LastName = lastName,
+            Email = email,
+            PhoneNumber = phoneNumber,
+            Address = new Address
+            {
+                Street = street,
+                Number = number,
+                City = city
+            }
+        };
+
+        var created = await _customerService.CreateCustomerAsync(newCustomer);
+        if (created != null)
+        {
+            await RefreshCustomers();
+            firstName = lastName = email = phoneNumber = street = city = string.Empty;
+            number = 0;
+        }
+    }
+
+    private async Task UpdateCustomer(int id, CustomerDto customer)
+    {
+        var updateCustomer = new UpdateCustomerDto
+        {
+            FirstName = customer.FirstName,
+            LastName = customer.LastName,
+            Email = customer.Email,
+            PhoneNumber = customer.PhoneNumber,
+            Address = new Address
+            {
+                Street = customer.Address.Street,
+                Number = customer.Address.Number,
+                City = customer.Address.City
+            }
+        };
+
+        await _customerService.UpdateCustomerAsync(id, updateCustomer);
+        await RefreshCustomers();
+    }
+
+    private async Task DeleteCustomer(int id)
+    {
+        var success = await _customerService.DeleteCustomerAsync(id);
+        if (success)
+        {
+            await RefreshCustomers();
+        }
+    }
+
+    private void GoToPage(int page) => currentPage = page;
+    private void PreviousPage() { if (currentPage > 1) currentPage--; }
+    private void NextPage() { if (currentPage < totalPages) currentPage++; }
+
+    private async Task ToggleOrders(int customerId)
+    {
+        if (expandedCustomerId == customerId)
+        {
+            expandedCustomerId = null;
+            return;
+        }
+
+        expandedCustomerId = customerId;
+
+        if (!customerOrders.ContainsKey(customerId))
+        {
+            var orders = await _orderService.GetOrdersByCustomerIdAsync(customerId);
+            customerOrders[customerId] = orders;
+        }
+    }
+}
