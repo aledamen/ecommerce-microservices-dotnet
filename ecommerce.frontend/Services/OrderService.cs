@@ -34,7 +34,7 @@ namespace ecommerce.frontend.Services
 
         public async Task<List<OrderDto>> GetOrdersByCustomerIdAsync(int customerId)
         {
-            var response = await _httpClient.GetAsync($"api/orders/customer/{customerId}");
+            var response = await _httpClient.GetAsync($"/api/orders/customer/{customerId}");
 
             var apiResponse = await response.Content.ReadFromJsonAsync<ApiResponse<List<OrderDto>>>();
 
