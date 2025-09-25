@@ -1,6 +1,10 @@
 ﻿namespace ecommerce.frontend.Dtos.Orders
 {
-    public record CreateOrderDto(List<ProductQuantityDto> ProductQuantity, int CustomerId);
+    public class CreateOrderDto
+    {
+        public List<ProductQuantityDto> ProductQuantity { get; set; } = new();
+        public int CustomerId { get; set; }
+    }
 
     public class ProductQuantityDto
     {

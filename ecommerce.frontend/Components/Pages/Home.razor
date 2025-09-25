@@ -5,10 +5,10 @@
 @inject IProductService _productService
 @rendermode InteractiveServer
 
-<PageTitle>Admin Section</PageTitle>
+<PageTitle>Products Section</PageTitle>
 
-<h1>Admin Section</h1>
-<p>Manage products and orders</p>
+<h1>Products Section</h1>
+<p>Manage products</p>
 
 <div class="mb-3 p-3 border rounded bg-light">
     <div class="row g-2">
@@ -61,11 +61,11 @@
                     <input type="number" @bind="p.Stock" class="form-control form-control-sm" />
                 </td>
                 <td class="d-flex gap-1">
-                    <button class="btn btn-sm btn-success" @onclick="() => UpdateProduct(p.Id,p)">
-                        <i class="bi bi-check-lg"></i>
+                    <button class="btn btn-sm btn-success" @onclick="() => UpdateProduct(p.Id, p)">
+                        <span class="oi oi-check" aria-hidden="true">UPDATE</span>
                     </button>
                     <button class="btn btn-sm btn-danger" @onclick="() => DeleteProduct(p.Id)">
-                        <i class="bi bi-trash"></i>
+                        <span class="oi oi-trash" aria-hidden="true">DEL</span>
                     </button>
                 </td>
             </tr>
@@ -81,8 +81,9 @@
 
         @for (int i = 1; i <= totalPages; i++)
         {
-            <li class="page-item @(currentPage == i ? "active" : "")">
-                <button class="page-link" @onclick="() => GoToPage(i)">@i</button>
+            var pageIndex = i;
+            <li class="page-item @(currentPage == pageIndex ? "active" : "")">
+                <button class="page-link" @onclick="() => GoToPage(pageIndex)">@pageIndex</button>
             </li>
         }
 
@@ -107,7 +108,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        await Task.Delay(1000);
+        await Task.Delay(500);
         await RefreshProducts();
     }
 
@@ -119,13 +120,16 @@
 
     private async Task AddProduct()
     {
+        if (string.IsNullOrEmpty(productName) || productPrice <= 0 || productStock < 0)
+            return;
+
         var newProduct = new CreateProductDto(productName, productDescription, productPrice, productStock);
         var created = await _productService.CreateProductAsync(newProduct);
         if (created != null)
         {
             await RefreshProducts();
-            productName = "";
-            productDescription = null;
+            productName = string.Empty;
+            productDescription = string.Empty;
             productPrice = 0;
             productStock = 0;
         }
@@ -135,7 +139,6 @@
     {
         var updateProduct = new UpdateProductDto(product.Name, product.Description, product.Price, product.Stock);
         await _productService.UpdateProductAsync(id, updateProduct);
-
         await RefreshProducts();
     }
 

@@ -18,7 +18,7 @@ namespace MSOrders.Presentation.Mappings
             CreateMap<OrderItem, OrderItemResponseDto>();
 
             CreateMap<Order, OrderResponseDto>()
-                .ForMember(dest => dest.Products,
+                .ForMember(dest => dest.Orders,
                            opt => opt.MapFrom(src => src.OrderItems));
         }
     }

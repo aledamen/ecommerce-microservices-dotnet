@@ -1,4 +1,9 @@
 ﻿namespace ecommerce.frontend.Dtos
 {
-    public record Address(string Street, string City, int Number);
+    public class Address
+    {
+        public required string Street { get; set; }
+        public required string City { get; set; }
+        public int Number { get; set; }
+    }
 }

@@ -16,7 +16,6 @@ namespace ecommerce.frontend.Services
         public async Task<List<ProductDto>> GetProductsAsync()
         {
             var response = await _httpClient.GetAsync("/api/products");
-            response.EnsureSuccessStatusCode();
 
             var apiResponse = await response.Content.ReadFromJsonAsync<ApiResponse<List<ProductDto>>>();
             if (apiResponse != null && apiResponse.Success)
@@ -30,7 +29,6 @@ namespace ecommerce.frontend.Services
         public async Task<ProductDto?> GetProductByIdAsync(int id)
         {
             var response = await _httpClient.GetAsync($"/api/products/{id}");
-            response.EnsureSuccessStatusCode();
 
             var apiResponse = await response.Content.ReadFromJsonAsync<ApiResponse<ProductDto>>();
             return apiResponse?.Data;
@@ -39,7 +37,6 @@ namespace ecommerce.frontend.Services
         public async Task<ProductDto?> CreateProductAsync(CreateProductDto product)
         {
             var response = await _httpClient.PostAsJsonAsync("/api/products", product);
-            response.EnsureSuccessStatusCode();
 
             var apiResponse = await response.Content.ReadFromJsonAsync<ApiResponse<ProductDto>>();
             return apiResponse?.Data;
@@ -48,7 +45,6 @@ namespace ecommerce.frontend.Services
         public async Task<ProductDto?> UpdateProductAsync(int id, UpdateProductDto product)
         {
             var response = await _httpClient.PatchAsJsonAsync($"/api/products/{id}", product);
-            response.EnsureSuccessStatusCode();
 
             var apiResponse = await response.Content.ReadFromJsonAsync<ApiResponse<ProductDto>>();
             return apiResponse?.Data;

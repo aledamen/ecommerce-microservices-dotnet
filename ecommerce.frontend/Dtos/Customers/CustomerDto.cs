@@ -1,4 +1,12 @@
 ﻿namespace ecommerce.frontend.Dtos.Customers
 {
-    public record CustomerDto(int Id, string FirstName, string LastName, string Email, string? PhoneNumber, Address Address);
+    public class CustomerDto
+    {
+        public int Id { get; set; }
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
+        public string? Email { get; set; }
+        public string? PhoneNumber { get; set; }
+        public Address? Address { get; set; }
+    }
 }
